@@ -1,5 +1,5 @@
 {
-    "name": "Alchemist DeMake",
+    "name": "AlchemistDeMake",
     "author": "ricar",
     "_version": "3.2.0",
     "_release": "1",
@@ -95,8 +95,40 @@
                         "speed": "2"
                     },
                     "id": "b9c058b7-1419-4ec1-916e-071f29a5abdf"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "20cb4a57-ebb2-45e4-adff-b592e04014cf",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "b63680a5-16ed-4705-9dd0-d32628be724d"
                 }
             ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Scene 3",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "width": 20,
+            "height": 18,
+            "type": "PLATFORM",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "20cb4a57-ebb2-45e4-adff-b592e04014cf",
+            "symbol": "scene_3",
+            "x": 458.5,
+            "y": 30,
+            "actors": [],
+            "triggers": [],
+            "script": [],
             "playerHit1Script": [],
             "playerHit2Script": [],
             "playerHit3Script": []
@@ -1780,7 +1812,7 @@
         "showConnections": "all",
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 176,
+        "worldScrollX": 247,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": true,
@@ -1810,9 +1842,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            591,
+            30,
             179,
-            179
+            740
         ],
         "showNavigator": true,
         "defaultFontId": "4bd653f0-e08d-424e-9e5b-c1f3aaa21e47",
