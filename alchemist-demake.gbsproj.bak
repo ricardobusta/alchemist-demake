@@ -76,25 +76,6 @@
                         "actorId": "$self$"
                     },
                     "id": "83ffb20c-71b2-44e3-9f31-479f7845b799"
-                },
-                {
-                    "command": "EVENT_AWAIT_INPUT",
-                    "args": {
-                        "input": [
-                            "a",
-                            "b",
-                            "start",
-                            "select"
-                        ]
-                    },
-                    "id": "f0ce6eab-fa2b-4c0a-ba87-de4868f67557"
-                },
-                {
-                    "command": "EVENT_FADE_OUT",
-                    "args": {
-                        "speed": "2"
-                    },
-                    "id": "b9c058b7-1419-4ec1-916e-071f29a5abdf"
                 }
             ],
             "playerHit1Script": [],
@@ -1780,7 +1761,7 @@
         "showConnections": "all",
         "showCollisionSlopeTiles": false,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 176,
+        "worldScrollX": 0,
         "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": true,
