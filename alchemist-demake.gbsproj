@@ -3666,7 +3666,28 @@
                     "isPinned": false,
                     "persistent": false,
                     "symbol": "actor_0",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+                            "args": {
+                                "field": "plat_double_jumps",
+                                "variable": "L0",
+                                "value": 100,
+                                "type": "number"
+                            },
+                            "id": "cb98a678-1248-4985-9874-e27beb0e5c1e"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "power"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "bb70a411-07c6-4156-aa7b-e5ad7e290a87"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -3689,7 +3710,18 @@
                     "persistent": false,
                     "collisionGroup": "2",
                     "symbol": "actor_1",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "a"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "4f0cee4f-f35a-43c7-9852-c331ffbe877a"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -3712,7 +3744,18 @@
                     "persistent": false,
                     "collisionGroup": "3",
                     "symbol": "actor_2",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "a"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "d2c25946-b831-4784-bf97-46104bc9c380"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -3757,61 +3800,7 @@
                     "y": 33
                 }
             ],
-            "triggers": [
-                {
-                    "name": "",
-                    "id": "e320bf8e-e2ea-4825-ab5a-79597a50372a",
-                    "x": 41,
-                    "y": 34,
-                    "symbol": "trigger_0",
-                    "width": 11,
-                    "height": 8,
-                    "script": [
-                        {
-                            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
-                            "args": {
-                                "field": "plat_double_jumps",
-                                "variable": "L0",
-                                "value": 255,
-                                "type": "number"
-                            },
-                            "id": "2daf1280-e1b9-4096-9c3e-df9eb5c247ba"
-                        },
-                        {
-                            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
-                            "args": {
-                                "field": "pl_double_jumps",
-                                "variable": "L0",
-                                "value": 255,
-                                "type": "number"
-                            },
-                            "id": "0e168508-11f1-4b8a-ad0a-819df22e54d3"
-                        }
-                    ],
-                    "leaveScript": [
-                        {
-                            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
-                            "args": {
-                                "field": "plat_double_jumps",
-                                "variable": "L0",
-                                "value": 0,
-                                "type": "number"
-                            },
-                            "id": "df4d12fe-8d66-4dd4-917e-36c486b043b5"
-                        },
-                        {
-                            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
-                            "args": {
-                                "field": "pl_double_jumps",
-                                "variable": "L0",
-                                "value": 0,
-                                "type": "number"
-                            },
-                            "id": "bcaa580c-83ca-4ed8-87ff-5fd3e4b5e718"
-                        }
-                    ]
-                }
-            ],
+            "triggers": [],
             "script": [
                 {
                     "command": "EVENT_PALETTE_SET_SPRITE",
@@ -10509,7 +10498,7 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 84.5,
+        "worldScrollX": 46,
         "worldScrollY": 0,
         "zoom": 125,
         "customColorsEnabled": true,

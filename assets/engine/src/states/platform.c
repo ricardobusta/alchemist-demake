@@ -77,6 +77,10 @@ WORD plat_grav;
 WORD plat_hold_grav;
 WORD plat_max_fall_vel;
 
+UBYTE plat_double_jumps;
+
+UBYTE pl_double_jumps;
+
 void platform_init(void) BANKED {
     UBYTE tile_x, tile_y;
 
@@ -443,8 +447,13 @@ end_y_collision:
         return;
     }
 
-    // Actor Collisions
+    // Check Jump Input
     UBYTE can_jump = TRUE;
+    if (!grounded && pl_double_jumps <= 0) {
+        can_jump = FALSE;
+    }
+
+    // Actor Collisions
     hit_actor = actor_overlapping_player(FALSE);
     if (hit_actor != NULL && hit_actor->collision_group) {
         player_register_collision_with(hit_actor);
@@ -459,9 +468,14 @@ end_y_collision:
     }
 
     // Jump
-    if (INPUT_PRESSED(INPUT_PLATFORM_JUMP) && grounded && can_jump) {
+    if (INPUT_PRESSED(INPUT_PLATFORM_JUMP) && can_jump) {
         pl_vel_y = -plat_jump_vel;
-        grounded = FALSE;
+        if(grounded) {
+            grounded = FALSE;
+            pl_double_jumps = plat_double_jumps;
+        }else if(pl_double_jumps > 0 && pl_double_jumps < 255){
+            pl_double_jumps --;
+        }
     }
 
     // Player animation
@@ -479,7 +493,11 @@ end_y_collision:
             actor_set_anim_idle(&PLAYER);
         }
     } else {
-        if (PLAYER.dir == DIR_LEFT) {
+        if(INPUT_LEFT) {
+            actor_set_anim(&PLAYER, ANIM_JUMP_LEFT);
+        }else if (INPUT_RIGHT) {
+            actor_set_anim(&PLAYER, ANIM_JUMP_RIGHT);
+        }else if (PLAYER.dir == DIR_LEFT) {
             actor_set_anim(&PLAYER, ANIM_JUMP_LEFT);
         } else {
             actor_set_anim(&PLAYER, ANIM_JUMP_RIGHT);

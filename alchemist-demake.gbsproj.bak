@@ -1,8 +1,8 @@
 {
     "name": "alchemist-demake",
     "author": "ricar",
-    "_version": "3.1.0",
-    "_release": "3",
+    "_version": "3.2.0",
+    "_release": "1",
     "scenes": [
         {
             "name": "Splash",
@@ -3665,9 +3665,29 @@
                     "paletteId": "",
                     "isPinned": false,
                     "persistent": false,
-                    "collisionGroup": "",
                     "symbol": "actor_0",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+                            "args": {
+                                "field": "plat_double_jumps",
+                                "variable": "L0",
+                                "value": 100,
+                                "type": "number"
+                            },
+                            "id": "cb98a678-1248-4985-9874-e27beb0e5c1e"
+                        },
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "power"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "bb70a411-07c6-4156-aa7b-e5ad7e290a87"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -3688,7 +3708,6 @@
                     "paletteId": "",
                     "isPinned": false,
                     "persistent": false,
-                    "collisionGroup": "",
                     "symbol": "actor_1",
                     "script": [],
                     "startScript": [],
@@ -3713,7 +3732,18 @@
                     "persistent": false,
                     "collisionGroup": "",
                     "symbol": "actor_2",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "a"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "d2c25946-b831-4784-bf97-46104bc9c380"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -3758,470 +3788,7 @@
                     "y": 33
                 }
             ],
-            "triggers": [
-                {
-                    "name": "",
-                    "id": "ff5543a2-82dd-496d-a0f8-472cdcb4cd56",
-                    "x": 41,
-                    "y": 34,
-                    "symbol": "trigger_0",
-                    "width": 11,
-                    "height": 8,
-                    "script": [
-                        {
-                            "command": "EVENT_COMMENT",
-                            "args": {
-                                "text": "Need to remove the animation states that we added for normal movement in the Scene Init, and switch the overall animation state to swimming.",
-                                "__collapse": false
-                            },
-                            "id": "3d24f364-c2d3-4e03-b278-999f18f5c7b3"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT_CLEAR",
-                            "args": {
-                                "state": "2",
-                                "__collapse": true
-                            },
-                            "id": "d1f498e5-69ff-443e-850b-42a7653e17d6"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT_CLEAR",
-                            "args": {
-                                "state": "0",
-                                "__collapse": true
-                            },
-                            "id": "b42cfd6c-7614-4b24-bc5f-85188cd7f8b8"
-                        },
-                        {
-                            "command": "EVENT_ACTOR_SET_STATE",
-                            "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": "Swimming",
-                                "__collapse": true
-                            },
-                            "id": "81a36fa1-2f38-4eaa-868b-6301ae85cfa9"
-                        },
-                        {
-                            "command": "EVENT_COMMENT",
-                            "args": {
-                                "text": "Updating engine field elements to match the swimming physics.",
-                                "__collapse": true
-                            },
-                            "id": "bbc66ef3-a036-4634-909b-56a5e3792657"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_grav",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 300
-                                },
-                                "__collapse": true
-                            },
-                            "id": "c6b6616e-2326-46a1-bf58-3e0d9bdb1795"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_extra_jumps",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 255
-                                },
-                                "__collapse": true
-                            },
-                            "id": "2a8015eb-5a35-49aa-82c9-338d7234b660"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_max_fall_vel",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 900
-                                },
-                                "__collapse": true
-                            },
-                            "id": "9b25a315-e303-4652-a59f-94d057cb0525"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_jump_vel",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 2400
-                                },
-                                "__collapse": true
-                            },
-                            "id": "b7c6c7f2-f1ff-486d-8a78-c0fe31c7a2a9"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_jump_min",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 0
-                                },
-                                "__collapse": true
-                            },
-                            "id": "ad4f7f89-eea4-4bf9-851f-23559e99a274"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_turn_acc",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 100
-                                },
-                                "__collapse": true
-                            },
-                            "id": "748df651-a851-4f47-86fd-f4e25fd20a89"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_walk_acc",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 50
-                                },
-                                "__collapse": true
-                            },
-                            "id": "eb966eff-0d01-4ab7-bc26-14bb7f4c3c02"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_wall_slide",
-                                "__collapse": true,
-                                "value": {
-                                    "type": "select",
-                                    "value": 0
-                                }
-                            },
-                            "id": "d2be926d-df55-4667-9203-30e68addc56b"
-                        },
-                        {
-                            "command": "EVENT_COMMENT",
-                            "args": {
-                                "text": "Normally, double jumps don't reset until you touch the ground again. We manually reset them here so the player can immediately swim.",
-                                "__collapse": true
-                            },
-                            "id": "8ccd9173-4955-4e04-8fdd-f1e57c39afcc"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_FIELD_SET",
-                            "args": {
-                                "field": "dj_val",
-                                "variable": "L0",
-                                "value": 255,
-                                "type": "number",
-                                "__collapse": true
-                            },
-                            "id": "4648181a-1e9c-4f88-9432-c6fa67a3329f"
-                        },
-                        {
-                            "command": "EVENT_LAUNCH_PROJECTILE",
-                            "args": {
-                                "spriteSheetId": "e4c32106-efe8-4914-92b7-124a75b61112",
-                                "spriteStateId": "",
-                                "actorId": "$self$",
-                                "x": 0,
-                                "y": -4,
-                                "otherActorId": "$self$",
-                                "direction": "up",
-                                "angle": 0,
-                                "angleVariable": "L0",
-                                "directionType": "direction",
-                                "initialOffset": 0,
-                                "speed": 1,
-                                "animSpeed": 255,
-                                "lifeTime": 0.2,
-                                "loopAnim": false,
-                                "destroyOnHit": false,
-                                "collisionGroup": "3",
-                                "collisionMask": [],
-                                "__collapse": true
-                            },
-                            "id": "6792a2ef-20c1-4779-bcd5-5d95eb64130f"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT",
-                            "args": {
-                                "state": "0",
-                                "__scriptTabs": "scriptinput"
-                            },
-                            "children": {
-                                "script": []
-                            },
-                            "id": "85d21dbe-9ae1-4119-9b3d-ba32677179bf"
-                        }
-                    ],
-                    "leaveScript": [
-                        {
-                            "command": "EVENT_ACTOR_SET_STATE",
-                            "args": {
-                                "actorId": "$self$",
-                                "spriteStateId": ""
-                            },
-                            "id": "43393ec6-b08f-4332-809a-e6d1dfec390a"
-                        },
-                        {
-                            "command": "EVENT_COMMENT",
-                            "args": {
-                                "text": "Reversing all the changes we made when entering the trigger area"
-                            },
-                            "id": "d5577e5b-05af-489d-9f93-ce42cedf57af"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT",
-                            "args": {
-                                "state": "0",
-                                "__scriptTabs": "scriptinput",
-                                "__collapse": true
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": "Secondary"
-                                        },
-                                        "id": "96d6e48d-1800-435b-b034-8c8b2ee08baa"
-                                    }
-                                ]
-                            },
-                            "id": "a9bc8293-65b3-48be-95f9-9e5db343eb44"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT",
-                            "args": {
-                                "state": "2",
-                                "__scriptTabs": "scriptinput",
-                                "__collapse": true
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": ""
-                                        },
-                                        "id": "2db5ae12-ca42-4458-8594-667224713703"
-                                    }
-                                ]
-                            },
-                            "id": "a0f4f96e-e236-4be4-97ba-a43dd038bfd4"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT",
-                            "args": {
-                                "state": "15",
-                                "__scriptTabs": "scriptinput",
-                                "__collapse": true
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": "Secondary"
-                                        },
-                                        "id": "b409c83c-a63c-4704-8a24-8f0ef0527574"
-                                    }
-                                ]
-                            },
-                            "id": "75cc8d23-905b-4441-bd0f-6a2f651ac86e"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_STATE_SCRIPT",
-                            "args": {
-                                "state": "17",
-                                "__scriptTabs": "scriptinput",
-                                "__collapse": true
-                            },
-                            "children": {
-                                "script": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": ""
-                                        },
-                                        "id": "9f0bdc25-ce2d-4b9c-b02b-ed813216628e"
-                                    }
-                                ]
-                            },
-                            "id": "4a9e798d-b790-4276-b3ea-b4b7bbf70616"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_grav",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 1200
-                                },
-                                "__collapse": true
-                            },
-                            "id": "9a345622-6c14-47fc-a7ad-af04579585b6"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_extra_jumps",
-                                "__collapse": true,
-                                "value": {
-                                    "type": "slider",
-                                    "value": 0
-                                }
-                            },
-                            "id": "fdb7995f-0f3b-4ed9-b00c-ce13389c51ff"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_max_fall_vel",
-                                "__collapse": true,
-                                "value": {
-                                    "type": "slider",
-                                    "value": 20000
-                                }
-                            },
-                            "id": "6bc2ac17-d186-4975-8ad7-28d12dd0d12c"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_jump_vel",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 6758
-                                },
-                                "__collapse": true
-                            },
-                            "id": "66eae3b9-84b6-4c31-902c-2205023686b9"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_jump_min",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 3000
-                                },
-                                "__collapse": true
-                            },
-                            "id": "7e0a1f18-28e7-41d0-840d-53a004f6a220"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_turn_acc",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 400
-                                },
-                                "__collapse": true
-                            },
-                            "id": "da563b36-e53b-4e6a-8734-9c07e43a9691"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_wall_slide",
-                                "value": {
-                                    "type": "select",
-                                    "value": 0
-                                },
-                                "__collapse": true
-                            },
-                            "id": "d76d6f61-7e5b-4a5b-a81a-08f63711bcb6"
-                        },
-                        {
-                            "command": "EVENT_ENGINE_FIELD_SET",
-                            "args": {
-                                "engineFieldKey": "plat_walk_acc",
-                                "value": {
-                                    "type": "slider",
-                                    "value": 150
-                                },
-                                "__collapse": true
-                            },
-                            "id": "61283726-3e04-422f-8c66-fac76b0c1cb2"
-                        },
-                        {
-                            "command": "EVENT_COMMENT",
-                            "args": {
-                                "text": "A little splash for good measure"
-                            },
-                            "id": "d5f0ca79-0972-46fb-8d30-c403ed345ec1"
-                        },
-                        {
-                            "command": "EVENT_LAUNCH_PROJECTILE",
-                            "args": {
-                                "spriteSheetId": "10971d06-9dc9-4b24-a364-54c97d9889da",
-                                "spriteStateId": "",
-                                "actorId": "$self$",
-                                "x": 0,
-                                "y": -7,
-                                "otherActorId": "$self$",
-                                "direction": "up",
-                                "angle": 0,
-                                "angleVariable": "L0",
-                                "directionType": "direction",
-                                "initialOffset": 0,
-                                "speed": 0.5,
-                                "animSpeed": 255,
-                                "lifeTime": 0.2,
-                                "loopAnim": false,
-                                "destroyOnHit": false,
-                                "collisionGroup": "3",
-                                "collisionMask": [],
-                                "__collapse": false
-                            },
-                            "id": "b42708a2-1639-4602-a2d0-8ccc8519a0bb"
-                        },
-                        {
-                            "command": "EVENT_COMMENT",
-                            "args": {
-                                "text": "We the jump out of the water is still using the old jump values, so we need to give it a boost.",
-                                "__collapse": true
-                            },
-                            "id": "7ce3c660-08d0-45e0-99d0-b1201cddff29"
-                        },
-                        {
-                            "command": "PT_EVENT_PLAYER_FIELD_SET",
-                            "args": {
-                                "field": "pl_vel_y",
-                                "variable": "L0",
-                                "value": -12000,
-                                "type": "number",
-                                "__collapse": true
-                            },
-                            "id": "5d9bf81b-d8f9-4815-b27e-a6a32121784d"
-                        },
-                        {
-                            "command": "PM_EVENT_PLATPLUS_FIELD_SET",
-                            "args": {
-                                "field": "dj_val",
-                                "variable": "L0",
-                                "value": 0,
-                                "type": "number",
-                                "__collapse": true
-                            },
-                            "id": "8a09947a-814d-41bd-8981-f3b869445d49"
-                        }
-                    ]
-                }
-            ],
+            "triggers": [],
             "script": [
                 {
                     "command": "EVENT_PALETTE_SET_SPRITE",
@@ -10853,7 +10420,7 @@
     "engineFieldValues": [
         {
             "id": "fade_style",
-            "value": 0
+            "value": 1
         },
         {
             "id": "plat_walk_vel",
@@ -10902,6 +10469,10 @@
         {
             "id": "plat_run_type",
             "value": 1
+        },
+        {
+            "id": "plat_double_jumps",
+            "value": 0
         }
     ],
     "settings": {
@@ -10913,9 +10484,11 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 218.5,
-        "worldScrollY": 434.5,
-        "zoom": 225,
+        "showCollisionSlopeTiles": true,
+        "showCollisionExtraTiles": false,
+        "worldScrollX": 46,
+        "worldScrollY": 0,
+        "zoom": 125,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
