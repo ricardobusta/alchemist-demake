@@ -2406,14 +2406,169 @@
                     "symbol": "actor_9",
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
+                            "command": "EVENT_SWITCH",
                             "args": {
-                                "text": [
-                                    " Cauldron"
-                                ],
-                                "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                                "variable": "26",
+                                "choices": 3,
+                                "__collapseCase0": false,
+                                "value0": 0,
+                                "__collapseCase1": false,
+                                "value1": 1,
+                                "__collapseCase2": false,
+                                "value2": 2,
+                                "__collapseCase3": false,
+                                "value3": 4,
+                                "__collapseCase4": false,
+                                "value4": 5,
+                                "__collapseCase5": false,
+                                "value5": 6,
+                                "__collapseCase6": false,
+                                "value6": 7,
+                                "__collapseCase7": false,
+                                "value7": 8,
+                                "__collapseCase8": false,
+                                "value8": 9,
+                                "__collapseCase9": false,
+                                "value9": 10,
+                                "__collapseCase10": false,
+                                "value10": 11,
+                                "__collapseCase11": false,
+                                "value11": 12,
+                                "__collapseCase12": false,
+                                "value12": 13,
+                                "__collapseCase13": false,
+                                "value13": 14,
+                                "__collapseCase14": false,
+                                "value14": 15,
+                                "__collapseCase15": false,
+                                "value15": 16,
+                                "__collapseElse": false
                             },
-                            "id": "f8774b6c-9e01-4061-bf4d-ace5179eb7d1"
+                            "children": {
+                                "true0": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Progress 0"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "5096d751-2d8b-4ec1-9172-a413cba4548f"
+                                    },
+                                    {
+                                        "command": "EVENT_IF_EXPRESSION",
+                                        "args": {
+                                            "expression": "$02$ >= 5 && $09$ >= 1",
+                                            "__collapseElse": false
+                                        },
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Ingredients!"
+                                                        ],
+                                                        "avatarId": "",
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "6ab736c7-0050-44aa-95e8-262f610f04da"
+                                                },
+                                                {
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "2",
+                                                        "operation": "sub",
+                                                        "other": "val",
+                                                        "vectorY": "L0",
+                                                        "value": 5,
+                                                        "minValue": "0",
+                                                        "maxValue": "32767",
+                                                        "clamp": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "ca6a143d-1869-490f-889c-35a550103625"
+                                                },
+                                                {
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "9",
+                                                        "operation": "sub",
+                                                        "other": "val",
+                                                        "vectorY": "L0",
+                                                        "value": 1,
+                                                        "minValue": "0",
+                                                        "maxValue": "32767",
+                                                        "clamp": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "cb85dc19-d737-4e83-9b37-f1e07be0c359"
+                                                },
+                                                {
+                                                    "command": "EVENT_INC_VALUE",
+                                                    "args": {
+                                                        "variable": "26"
+                                                    },
+                                                    "id": "60876ed6-f1b1-4894-ab66-6cbc89e7c0b7"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "Nope\n"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "f7669994-cdf5-43c2-ba0a-147e87a5c64a"
+                                                }
+                                            ]
+                                        },
+                                        "id": "6d4f6849-d887-489d-9bb0-b63c32a16cbf"
+                                    }
+                                ],
+                                "true1": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Progress 1"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "f6edeb15-eeb2-4adb-bbc9-4e9ce5d0c203"
+                                    }
+                                ],
+                                "true2": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                "Progress 2"
+                                            ],
+                                            "avatarId": ""
+                                        },
+                                        "id": "4da2c351-9e61-4870-bd15-d0fde48b34d6"
+                                    }
+                                ],
+                                "true3": [],
+                                "true4": [],
+                                "true5": [],
+                                "true6": [],
+                                "true7": [],
+                                "true8": [],
+                                "true9": [],
+                                "true10": [],
+                                "true11": [],
+                                "true12": [],
+                                "true13": [],
+                                "true14": [],
+                                "true15": [],
+                                "false": []
+                            },
+                            "id": "ee2e1a27-19c6-48d9-81c1-e158962ff7de"
                         }
                     ],
                     "startScript": [],
@@ -16422,7 +16577,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "dream.png"
+            "filename": "dream.png",
+            "tileColors": []
         },
         {
             "id": "65e74bb5-bd16-41a4-a99c-9410aaad100e",
@@ -27097,11 +27253,6 @@
             "symbol": "var_plant_1_picked"
         },
         {
-            "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9__L0",
-            "name": "Saw Intro",
-            "symbol": "var_saw_intro_1"
-        },
-        {
             "id": "4",
             "name": "Got Potion 1",
             "symbol": "var_got_potion_1"
@@ -27210,6 +27361,16 @@
             "id": "25",
             "name": "Flask Chest 3",
             "symbol": "var_flask_chest_3"
+        },
+        {
+            "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9__L0",
+            "name": "Saw Intro",
+            "symbol": "var_saw_intro_1"
+        },
+        {
+            "id": "26",
+            "name": "Cauldron Progress",
+            "symbol": "var_cauldron_progress"
         }
     ],
     "engineFieldValues": [
@@ -27281,7 +27442,7 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 400,
+        "worldScrollX": 276,
         "worldScrollY": 0,
         "zoom": 125,
         "customColorsEnabled": true,
