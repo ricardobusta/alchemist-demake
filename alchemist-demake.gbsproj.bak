@@ -1788,6 +1788,103 @@
                     "id": "c019d3d7-6569-43f8-8f31-64f75db11998",
                     "x": 57,
                     "y": 13
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "efe71be4-cd4c-4968-be76-491e95206c48",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_6",
+                    "script": [
+                        {
+                            "command": "EVENT_IF_FALSE",
+                            "args": {
+                                "variable": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Open"
+                                        },
+                                        "id": "9fc60fcb-a440-4584-8d4b-db3264118daa"
+                                    },
+                                    {
+                                        "command": "EVENT_SOUND_PLAY_EFFECT",
+                                        "args": {
+                                            "type": "crash",
+                                            "priority": "medium",
+                                            "pitch": 4,
+                                            "frequency": 200,
+                                            "duration": 0.5,
+                                            "wait": false,
+                                            "effect": 0
+                                        },
+                                        "id": "e596d1e9-a929-4514-982f-b8d5a71c06f8"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                " Acquired:\n Knife"
+                                            ],
+                                            "avatarId": "3c185136-cf1d-4460-a3d5-4b4bbe6ef638"
+                                        },
+                                        "id": "f795c988-8728-4d7c-81ea-6591da03ab85"
+                                    },
+                                    {
+                                        "command": "EVENT_SET_TRUE",
+                                        "args": {
+                                            "variable": "0"
+                                        },
+                                        "id": "10194719-9453-4722-bbdc-c942214b682d"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "0af61ae3-92e7-460c-b74e-10f3dae8bb08"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "0",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Open"
+                                        },
+                                        "id": "8be4ccd0-4bcc-4798-9738-a0db50eaecd5"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "87e1859f-7f12-4686-8729-def2b35fa2d0"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "02765864-c9e6-4c69-a434-4bda115ccd4b",
+                    "x": 25,
+                    "y": 13
                 }
             ],
             "triggers": [
@@ -2261,9 +2358,9 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                "The door is locked?\nWhere are the keys?"
+                                                " Is the door locked?\n Where are the keys?"
                                             ],
-                                            "avatarId": "379cdf06-f602-496a-826d-6f31094bf0ba"
+                                            "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
                                         },
                                         "id": "60855fdb-13e2-46f0-98ae-6b6240926558"
                                     }
@@ -2295,29 +2392,6 @@
                     "y": 14
                 },
                 {
-                    "name": "Empty Cupboard",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "bf370f40-cca2-4043-a18e-6148976c65bf",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_8",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "087149b6-56fc-44b1-b5d2-640ee2cc5dda",
-                    "x": 5,
-                    "y": 14
-                },
-                {
                     "name": "Cauldron",
                     "frame": 0,
                     "animate": false,
@@ -2330,7 +2404,18 @@
                     "persistent": false,
                     "collisionGroup": "",
                     "symbol": "actor_9",
-                    "script": [],
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    " Cauldron"
+                                ],
+                                "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                            },
+                            "id": "f8774b6c-9e01-4061-bf4d-ace5179eb7d1"
+                        }
+                    ],
                     "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
@@ -2358,7 +2443,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Hydro-potion recipe:\n5 leaves\n1 flask"
+                                    "Hydro-potion recipe:\nGrass x5\nFlask x1"
                                 ],
                                 "avatarId": ""
                             },
@@ -2402,7 +2487,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Feather-potion recipe:\n2 leaves\n3 flowers\n1 flask"
+                                    "Feather-potion recipe:\nGrass x3\nFlower x3\nFlask x1"
                                 ],
                                 "avatarId": ""
                             },
@@ -2473,43 +2558,6 @@
                     "y": 8
                 },
                 {
-                    "name": "Flask Cupboard",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "bf370f40-cca2-4043-a18e-6148976c65bf",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_5",
-                    "script": [
-                        {
-                            "command": "EVENT_SOUND_PLAY_EFFECT",
-                            "args": {
-                                "type": "723ac60f-6072-41a6-b6cc-acabb93ac5f4",
-                                "priority": "medium",
-                                "pitch": 4,
-                                "frequency": 200,
-                                "duration": 0.5,
-                                "wait": true,
-                                "effect": 0
-                            },
-                            "id": "0344e397-4701-48e4-8e4b-18c36f09154d"
-                        }
-                    ],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "6ecfcbcb-5456-4bbe-98bf-34cb3cbe9bbc",
-                    "x": 14,
-                    "y": 14
-                },
-                {
                     "name": "Key Chest",
                     "frame": 0,
                     "animate": false,
@@ -2551,7 +2599,7 @@
                                         "command": "EVENT_TEXT",
                                         "args": {
                                             "text": [
-                                                " acquired:\n key"
+                                                " Acquired:\n Key"
                                             ],
                                             "avatarId": "b7990a26-880f-4398-9126-bd6b3c63ef48"
                                         },
@@ -2609,50 +2657,22 @@
                     "symbol": "actor_7",
                     "script": [
                         {
-                            "command": "EVENT_IF_FALSE",
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
                             "args": {
-                                "variable": "22",
-                                "__collapseElse": true
+                                "customEventId": "9c09e1aa-4109-41b2-ab9e-aea5dc1ea338",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "11"
+                                }
                             },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": "Open"
-                                        },
-                                        "id": "a597b3af-44d6-4ee6-b28d-7036a297bdc0"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "10",
-                                            "__collapse": false
-                                        },
-                                        "id": "d70829bd-49e1-4a17-9fff-df7b0a608ca3"
-                                    },
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                " acquired:\n key"
-                                            ],
-                                            "avatarId": "b7990a26-880f-4398-9126-bd6b3c63ef48"
-                                        },
-                                        "id": "3ef07621-3031-44f2-8b99-2673dca3d849"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "eb237b2a-36be-44e3-bf5c-4b4d198deaba"
+                            "id": "f3000dd3-1340-4fa6-8669-d314b507b556"
                         }
                     ],
                     "startScript": [
                         {
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "10",
+                                "variable": "11",
                                 "__collapseElse": true
                             },
                             "children": {
@@ -2678,6 +2698,120 @@
                     "id": "3a5989e6-7d29-4b43-85ca-a1953afc6000",
                     "x": 13,
                     "y": 9
+                },
+                {
+                    "name": "Chest 2",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf370f40-cca2-4043-a18e-6148976c65bf",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_5",
+                    "script": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "9c09e1aa-4109-41b2-ab9e-aea5dc1ea338",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "22"
+                                }
+                            },
+                            "id": "6cd73fbd-6365-43c8-893c-f807bab66386"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "22",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Open"
+                                        },
+                                        "id": "69bd199c-d5df-4672-a68f-76a7176267f0"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "1e16aa0a-c6b1-4415-b894-15914bf2f64f"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "e1afdf1b-0ef6-45a2-af85-a7c0b7548fd4",
+                    "x": 5,
+                    "y": 14
+                },
+                {
+                    "name": "Flask Chest 1",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "bf370f40-cca2-4043-a18e-6148976c65bf",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_8",
+                    "script": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "51f1b759-e640-41ec-b825-1d70bcefe989",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "23"
+                                }
+                            },
+                            "id": "73c92e7a-f8f4-4301-90cb-d9ef766e8039"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "23",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Open"
+                                        },
+                                        "id": "866b8e79-c0c4-40c0-84b9-fbe985ced9c2"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "1db4d645-fa5d-424b-a590-69a0ceeee0e2"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "3ca3ad09-e1ea-4280-85cf-15379cc7095b",
+                    "x": 14,
+                    "y": 14
                 }
             ],
             "triggers": [],
@@ -5359,103 +5493,6 @@
                     "id": "dfa1fe4c-f5c4-4b90-9c54-9a9bb70d32a3",
                     "x": 68,
                     "y": 27
-                },
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "efe71be4-cd4c-4968-be76-491e95206c48",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "persistent": false,
-                    "collisionGroup": "",
-                    "symbol": "actor_6",
-                    "script": [
-                        {
-                            "command": "EVENT_IF_FALSE",
-                            "args": {
-                                "variable": "0",
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": "Open"
-                                        },
-                                        "id": "9fc60fcb-a440-4584-8d4b-db3264118daa"
-                                    },
-                                    {
-                                        "command": "EVENT_SOUND_PLAY_EFFECT",
-                                        "args": {
-                                            "type": "crash",
-                                            "priority": "medium",
-                                            "pitch": 4,
-                                            "frequency": 200,
-                                            "duration": 0.5,
-                                            "wait": false,
-                                            "effect": 0
-                                        },
-                                        "id": "e596d1e9-a929-4514-982f-b8d5a71c06f8"
-                                    },
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                " acquired:\n knife"
-                                            ],
-                                            "avatarId": "3c185136-cf1d-4460-a3d5-4b4bbe6ef638"
-                                        },
-                                        "id": "f795c988-8728-4d7c-81ea-6591da03ab85"
-                                    },
-                                    {
-                                        "command": "EVENT_SET_TRUE",
-                                        "args": {
-                                            "variable": "0"
-                                        },
-                                        "id": "10194719-9453-4722-bbdc-c942214b682d"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "0af61ae3-92e7-460c-b74e-10f3dae8bb08"
-                        }
-                    ],
-                    "startScript": [
-                        {
-                            "command": "EVENT_IF_TRUE",
-                            "args": {
-                                "variable": "0",
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_ACTOR_SET_STATE",
-                                        "args": {
-                                            "actorId": "$self$",
-                                            "spriteStateId": "Open"
-                                        },
-                                        "id": "8be4ccd0-4bcc-4798-9738-a0db50eaecd5"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "87e1859f-7f12-4686-8729-def2b35fa2d0"
-                        }
-                    ],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "02765864-c9e6-4c69-a434-4bda115ccd4b",
-                    "x": 55,
-                    "y": 7
                 },
                 {
                     "name": "Plant 2",
@@ -9139,7 +9176,7 @@
                     "y": 18
                 },
                 {
-                    "name": "Empty Cupboard",
+                    "name": "Flask Chest 2",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "efe71be4-cd4c-4968-be76-491e95206c48",
@@ -9150,15 +9187,49 @@
                     "isPinned": false,
                     "persistent": false,
                     "collisionGroup": "",
-                    "symbol": "actor_35",
-                    "script": [],
-                    "startScript": [],
+                    "symbol": "actor_37",
+                    "script": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "51f1b759-e640-41ec-b825-1d70bcefe989",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "24"
+                                }
+                            },
+                            "id": "8c0cd991-077d-49b2-9f84-6ff266493a24"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "24",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Open"
+                                        },
+                                        "id": "4eaf4293-c6a5-4d8a-9fce-2546a27f3c7f"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "2467ef3d-720b-4f76-88f0-ae013543818d"
+                        }
+                    ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "9b0b25ed-2dfc-4053-812a-25be24e97817",
-                    "x": 41,
+                    "id": "c673d6a6-9279-42ec-8468-8854754ac556",
+                    "x": 43,
                     "y": 29
                 }
             ],
@@ -10396,7 +10467,7 @@
             "y": 57.200000000000095,
             "actors": [
                 {
-                    "name": "Empty Cupboard",
+                    "name": "Flask Chest 3",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "efe71be4-cd4c-4968-be76-491e95206c48",
@@ -10408,8 +10479,42 @@
                     "persistent": false,
                     "collisionGroup": "",
                     "symbol": "actor_36",
-                    "script": [],
-                    "startScript": [],
+                    "script": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "51f1b759-e640-41ec-b825-1d70bcefe989",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "25"
+                                }
+                            },
+                            "id": "c7b1db94-afb3-4025-80bc-ac8f974724d4"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "25",
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_SET_STATE",
+                                        "args": {
+                                            "actorId": "$self$",
+                                            "spriteStateId": "Open"
+                                        },
+                                        "id": "6ab47532-77c6-46f2-88e7-c4bdf1069f3e"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "d99d009c-afd3-47a4-b0ea-867f1b38fc6d"
+                        }
+                    ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
@@ -11636,11 +11741,11 @@
                     "y": 11
                 },
                 {
-                    "name": "",
+                    "name": "Plant Count",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "e5236b5f-ebd3-40f6-b2f1-88a61114fb32",
-                    "direction": "left",
+                    "direction": "right",
                     "moveSpeed": 1,
                     "animSpeed": 15,
                     "paletteId": "",
@@ -11651,23 +11756,26 @@
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                            "args": {
-                                "actorId": "$self$",
-                                "speed": 255
-                            },
-                            "id": "035eb38d-b876-48b5-9e9e-c4c76adec50a"
-                        },
-                        {
                             "command": "EVENT_ACTOR_SET_FRAME",
                             "args": {
-                                "actorId": "$self$",
+                                "actorId": "0",
                                 "frame": {
                                     "type": "variable",
                                     "value": "2"
                                 }
                             },
-                            "id": "8bbda79e-0af9-4ad0-8777-0ce52e100366"
+                            "id": "049fac37-70f3-4eec-9f13-20d5232105d4"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "0abb7261-51df-434b-a0e1-7244e62b0cca",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "2"
+                                }
+                            },
+                            "id": "e147cdb7-48de-40f5-84df-9d593f5f9a76"
                         }
                     ],
                     "updateScript": [],
@@ -11675,15 +11783,15 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "3e928669-e293-4fde-96ff-1aa710ebe939",
-                    "x": 7,
-                    "y": 5
+                    "x": 5,
+                    "y": 6
                 },
                 {
-                    "name": "",
+                    "name": "Plant Count",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "e5236b5f-ebd3-40f6-b2f1-88a61114fb32",
-                    "direction": "left",
+                    "direction": "right",
                     "moveSpeed": 1,
                     "animSpeed": 15,
                     "paletteId": "",
@@ -11694,82 +11802,87 @@
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                            "args": {
-                                "actorId": "$self$",
-                                "speed": 255
-                            },
-                            "id": "94beb3e5-7507-4986-a58c-d7a88146f8b0"
-                        },
-                        {
                             "command": "EVENT_ACTOR_SET_FRAME",
                             "args": {
-                                "actorId": "$self$",
+                                "actorId": "0",
                                 "frame": {
-                                    "type": "number",
-                                    "value": 3
+                                    "type": "variable",
+                                    "value": "7"
                                 }
                             },
-                            "id": "ff3f905d-8c8a-48a6-9acd-93fd5fffacb0"
+                            "id": "c305d57e-4e02-4d6b-89f2-53c23867a6f2"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "0abb7261-51df-434b-a0e1-7244e62b0cca",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "7"
+                                }
+                            },
+                            "id": "5f4fbe12-0e06-4d5a-9081-b6b3d9462b73"
                         }
                     ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "27c2a807-7088-48eb-9e33-2526c1081bb1",
-                    "x": 12,
-                    "y": 5
+                    "id": "22cc27e8-6ffb-473e-a80e-3c2de56c5aac",
+                    "x": 10,
+                    "y": 6
                 },
                 {
-                    "name": "",
+                    "name": "Plant Count",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "e5236b5f-ebd3-40f6-b2f1-88a61114fb32",
-                    "direction": "left",
+                    "direction": "right",
                     "moveSpeed": 1,
                     "animSpeed": 15,
                     "paletteId": "",
                     "isPinned": false,
                     "persistent": false,
-                    "collisionGroup": "",
                     "symbol": "actor_28",
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                            "args": {
-                                "actorId": "$self$",
-                                "speed": 255
-                            },
-                            "id": "70e7e4ce-6ca9-4e29-b171-e2bdccf2b606"
-                        },
-                        {
                             "command": "EVENT_ACTOR_SET_FRAME",
                             "args": {
-                                "actorId": "$self$",
+                                "actorId": "0",
                                 "frame": {
-                                    "type": "number",
-                                    "value": 3
+                                    "type": "variable",
+                                    "value": "9"
                                 }
                             },
-                            "id": "48b1c23e-ddc6-481e-8f55-6edb103778db"
+                            "id": "4eb26d23-43a2-4558-8ffb-081ac26a5b92"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "0abb7261-51df-434b-a0e1-7244e62b0cca",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "9"
+                                }
+                            },
+                            "id": "ca83cf37-c6f1-4f0d-9b04-c787a1340d7b"
                         }
                     ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "e35a4445-1766-44c3-a50a-75793ccfb9e8",
-                    "x": 15,
-                    "y": 9
+                    "id": "abece38a-a64c-446d-ac42-2793534e333e",
+                    "x": 13,
+                    "y": 10
                 },
                 {
-                    "name": "",
+                    "name": "Plant Count",
                     "frame": 0,
                     "animate": false,
                     "spriteSheetId": "e5236b5f-ebd3-40f6-b2f1-88a61114fb32",
-                    "direction": "left",
+                    "direction": "right",
                     "moveSpeed": 1,
                     "animSpeed": 15,
                     "paletteId": "",
@@ -11780,32 +11893,35 @@
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
-                            "args": {
-                                "actorId": "$self$",
-                                "speed": 255
-                            },
-                            "id": "b44ab78e-6375-4098-9b73-7aa4c1269384"
-                        },
-                        {
                             "command": "EVENT_ACTOR_SET_FRAME",
                             "args": {
-                                "actorId": "$self$",
+                                "actorId": "0",
                                 "frame": {
-                                    "type": "number",
-                                    "value": 3
+                                    "type": "variable",
+                                    "value": "8"
                                 }
                             },
-                            "id": "87673ae1-9480-4e71-996f-8cc303733d77"
+                            "id": "5356630f-d0ef-46f6-a33c-f29efdd43dd0"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "0abb7261-51df-434b-a0e1-7244e62b0cca",
+                                "$variable[V0]$": {
+                                    "type": "variable",
+                                    "value": "8"
+                                }
+                            },
+                            "id": "ead02977-fc3a-4d62-85d4-de08b4083d1a"
                         }
                     ],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
                     "hit3Script": [],
-                    "id": "a19e3326-9624-4c65-95c5-49894d868514",
-                    "x": 4,
-                    "y": 9
+                    "id": "da327cfb-d6c5-4e0b-a10a-12962be3c9d9",
+                    "x": 2,
+                    "y": 10
                 }
             ],
             "triggers": [],
@@ -24446,7 +24562,7 @@
                 {
                     "id": "a6faf637-d71c-4748-a8c9-16ad61c791d7",
                     "name": "",
-                    "animationType": "fixed",
+                    "animationType": "multi",
                     "flipLeft": true,
                     "animations": [
                         {
@@ -26195,19 +26311,14 @@
             "variables": {
                 "V0": {
                     "id": "V0",
-                    "name": "Variable A",
-                    "passByReference": true
-                },
-                "V1": {
-                    "id": "V1",
-                    "name": "Variable B",
+                    "name": "Unique Var",
                     "passByReference": true
                 }
             },
             "actors": {
                 "0": {
                     "id": "0",
-                    "name": "Actor A"
+                    "name": "Item Actor"
                 }
             },
             "symbol": "script_3",
@@ -26224,7 +26335,7 @@
                                 "command": "EVENT_TEXT",
                                 "args": {
                                     "text": [
-                                        " I need a knife\n for this"
+                                        " I need a knife to\n pick this grass"
                                     ],
                                     "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
                                 },
@@ -26249,31 +26360,41 @@
                             {
                                 "command": "EVENT_IF_VALUE",
                                 "args": {
-                                    "variable": "V1",
+                                    "variable": "2",
                                     "operator": "<",
                                     "comparator": "0",
                                     "__collapseElse": false,
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "children": {
                                     "true": [
                                         {
                                             "command": "EVENT_SET_VALUE",
                                             "args": {
-                                                "variable": "V1",
+                                                "variable": "2",
                                                 "value": {
                                                     "type": "number",
                                                     "value": 1
                                                 }
                                             },
                                             "id": "770d983b-e5cb-4bcd-88d5-56cb4001e09d"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    " Acquired:\n Plant x1"
+                                                ],
+                                                "avatarId": "3c185136-cf1d-4460-a3d5-4b4bbe6ef638"
+                                            },
+                                            "id": "38e79e94-fa9e-473c-99ba-7c1f417332c5"
                                         }
                                     ],
                                     "false": [
                                         {
                                             "command": "EVENT_INC_VALUE",
                                             "args": {
-                                                "variable": "V1"
+                                                "variable": "2"
                                             },
                                             "id": "85757371-cf87-459e-b9d7-c1e0472f2809"
                                         }
@@ -26285,7 +26406,7 @@
                                 "command": "EVENT_SET_TRUE",
                                 "args": {
                                     "variable": "V0",
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "id": "2b791f15-d98e-4f58-9c5c-e84e59245260"
                             },
@@ -26293,7 +26414,7 @@
                                 "command": "EVENT_ACTOR_DEACTIVATE",
                                 "args": {
                                     "actorId": "0",
-                                    "__collapse": true
+                                    "__collapse": false
                                 },
                                 "id": "b32a5aae-7c74-4722-852d-6870f1c3d9f7"
                             }
@@ -26360,6 +26481,415 @@
                         "false": []
                     },
                     "id": "74cf0d08-4b31-4854-9952-506d296b5bd8"
+                }
+            ]
+        },
+        {
+            "id": "51f1b759-e640-41ec-b825-1d70bcefe989",
+            "name": "Flask Chest",
+            "description": "",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "Chest Var",
+                    "passByReference": true
+                }
+            },
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Chest Actor"
+                }
+            },
+            "symbol": "script_5",
+            "script": [
+                {
+                    "command": "EVENT_IF_FALSE",
+                    "args": {
+                        "variable": "V0",
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_ACTOR_SET_STATE",
+                                "args": {
+                                    "actorId": "0",
+                                    "spriteStateId": "Open"
+                                },
+                                "id": "9386f09e-677e-47bf-9bc9-a98aa12a3844"
+                            },
+                            {
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "V0",
+                                    "__collapse": false
+                                },
+                                "id": "7722b6d5-87e3-496c-bb51-de730fbfa8bb"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "9",
+                                    "operator": "<",
+                                    "comparator": "0",
+                                    "__collapseElse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "9",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 1
+                                                }
+                                            },
+                                            "id": "841ff270-3f26-4aeb-b888-e597efa3d2a7"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_INC_VALUE",
+                                            "args": {
+                                                "variable": "9"
+                                            },
+                                            "id": "ff44bbff-6760-4c81-8681-b73c26520928"
+                                        }
+                                    ]
+                                },
+                                "id": "c5ccc21a-5311-4872-bd61-e49d577c7337"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        " Acquired:\n Flask x1"
+                                    ],
+                                    "avatarId": "85bb6cad-ad36-4567-86c9-b4efaf12a2be"
+                                },
+                                "id": "99f429e7-91eb-4381-9881-e40be2306059"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "c425f6d1-1d6d-4536-bcc6-892dc750412d"
+                }
+            ]
+        },
+        {
+            "id": "0abb7261-51df-434b-a0e1-7244e62b0cca",
+            "name": "Item Counter",
+            "description": "",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "Variable",
+                    "passByReference": true
+                }
+            },
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Counter Actor"
+                }
+            },
+            "symbol": "script_6",
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_SET_ANIMATION_SPEED",
+                    "args": {
+                        "actorId": "0",
+                        "speed": 255
+                    },
+                    "id": "a8bdc1a9-bb93-4af6-ad8a-788a6c216de3"
+                },
+                {
+                    "command": "EVENT_ACTOR_SET_FRAME",
+                    "args": {
+                        "actorId": "0",
+                        "frame": {
+                            "type": "variable",
+                            "value": "V0"
+                        },
+                        "__comment": true
+                    },
+                    "id": "b8c50f25-5a31-43ac-92ef-80be005f6cf9"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Set to $V0$"
+                        ],
+                        "avatarId": "",
+                        "__comment": true,
+                        "__collapse": true
+                    },
+                    "id": "33580d07-75a4-466e-8edb-dc4ec7d06be7"
+                },
+                {
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "V0",
+                        "operator": "<",
+                        "comparator": "0",
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_ACTOR_HIDE",
+                                "args": {
+                                    "actorId": "0"
+                                },
+                                "id": "14f69050-02de-49a6-ab2c-4e123e8ac3a0"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "d5dc9309-8096-47ba-acda-59efa7e2ce8a"
+                }
+            ]
+        },
+        {
+            "id": "bf28d6cd-45d6-4a5e-910f-5f6b99137f80",
+            "name": "Collect Flower",
+            "description": "",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "Variable A",
+                    "passByReference": true
+                }
+            },
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Actor A"
+                }
+            },
+            "symbol": "script_7",
+            "script": [
+                {
+                    "command": "EVENT_IF_FALSE",
+                    "args": {
+                        "variable": "0",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        " I need a knife to\n pick this flower"
+                                    ],
+                                    "avatarId": "796a5c90-9228-41e2-922f-12a89913fce2"
+                                },
+                                "id": "8a086864-0aa7-4a4e-8fd5-332047dbf8a9"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SOUND_PLAY_EFFECT",
+                                "args": {
+                                    "type": "crash",
+                                    "priority": "medium",
+                                    "pitch": 4,
+                                    "frequency": 200,
+                                    "duration": 0.5,
+                                    "wait": false,
+                                    "effect": 0,
+                                    "__collapse": true
+                                },
+                                "id": "02528f9f-be8f-4c3f-acf3-4bf33f0e5b42"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "7",
+                                    "operator": "<",
+                                    "comparator": "0",
+                                    "__collapseElse": false,
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "7",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 1
+                                                }
+                                            },
+                                            "id": "e131e03b-43e8-44af-9082-103f68b68a1e"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    " Acquired:\n Flower x1"
+                                                ],
+                                                "avatarId": "796a5c90-9228-41e2-922f-12a89913fce2"
+                                            },
+                                            "id": "32e73872-411a-4e03-be5b-6816ce3eb378"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_INC_VALUE",
+                                            "args": {
+                                                "variable": "7"
+                                            },
+                                            "id": "594826a5-7c5e-4000-b762-0d47af784bb6"
+                                        }
+                                    ]
+                                },
+                                "id": "a02c02ed-abbb-458d-8e54-1b0d82a52964"
+                            },
+                            {
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "V0",
+                                    "__collapse": false
+                                },
+                                "id": "5f205e3b-3beb-4638-8f69-3b2f004f512f"
+                            },
+                            {
+                                "command": "EVENT_ACTOR_DEACTIVATE",
+                                "args": {
+                                    "actorId": "0",
+                                    "__collapse": false
+                                },
+                                "id": "d5dbd497-16ca-46af-a737-92b04b6cb023"
+                            }
+                        ]
+                    },
+                    "id": "35618f56-de37-4176-ac37-68a82a96ed1b"
+                }
+            ]
+        },
+        {
+            "id": "e3645bcd-909a-4d47-b8ee-43ef926bf54a",
+            "name": "Collect Mushroom",
+            "description": "",
+            "variables": {
+                "V0": {
+                    "id": "V0",
+                    "name": "Variable A",
+                    "passByReference": true
+                }
+            },
+            "actors": {
+                "0": {
+                    "id": "0",
+                    "name": "Actor A"
+                }
+            },
+            "symbol": "script_8",
+            "script": [
+                {
+                    "command": "EVENT_IF_FALSE",
+                    "args": {
+                        "variable": "0",
+                        "__collapseElse": false
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        " I need a knife to\n pick this shroom"
+                                    ],
+                                    "avatarId": "d94bb31b-9e94-411f-ae62-29d12f0b3ff7"
+                                },
+                                "id": "1ba51ced-4633-4432-bdbe-daac2c10cd7d"
+                            }
+                        ],
+                        "false": [
+                            {
+                                "command": "EVENT_SOUND_PLAY_EFFECT",
+                                "args": {
+                                    "type": "crash",
+                                    "priority": "medium",
+                                    "pitch": 4,
+                                    "frequency": 200,
+                                    "duration": 0.5,
+                                    "wait": false,
+                                    "effect": 0,
+                                    "__collapse": true
+                                },
+                                "id": "49b3c196-f234-4276-8c37-1369fcb46ebc"
+                            },
+                            {
+                                "command": "EVENT_IF_VALUE",
+                                "args": {
+                                    "variable": "8",
+                                    "operator": "<",
+                                    "comparator": "0",
+                                    "__collapseElse": false,
+                                    "__collapse": false
+                                },
+                                "children": {
+                                    "true": [
+                                        {
+                                            "command": "EVENT_SET_VALUE",
+                                            "args": {
+                                                "variable": "8",
+                                                "value": {
+                                                    "type": "number",
+                                                    "value": 1
+                                                }
+                                            },
+                                            "id": "9a3a18c0-74b1-467f-867f-3bc4904ad116"
+                                        },
+                                        {
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": [
+                                                    " Acquired:\n Mushroom x1"
+                                                ],
+                                                "avatarId": "d94bb31b-9e94-411f-ae62-29d12f0b3ff7"
+                                            },
+                                            "id": "e2e0b754-e7c6-4751-b735-dc575a4ec68f"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "command": "EVENT_INC_VALUE",
+                                            "args": {
+                                                "variable": "8"
+                                            },
+                                            "id": "11702e3a-175e-4d49-aae9-164847dc8564"
+                                        }
+                                    ]
+                                },
+                                "id": "276e53ae-6183-413d-8d68-996f79d2b405"
+                            },
+                            {
+                                "command": "EVENT_SET_TRUE",
+                                "args": {
+                                    "variable": "V0",
+                                    "__collapse": false
+                                },
+                                "id": "b3164c7e-59a0-434a-a9e4-5e4026f7f40f"
+                            },
+                            {
+                                "command": "EVENT_ACTOR_DEACTIVATE",
+                                "args": {
+                                    "actorId": "0",
+                                    "__collapse": false
+                                },
+                                "id": "31c3df1c-7f65-4abd-80ba-592d0ecb1bfe"
+                            }
+                        ]
+                    },
+                    "id": "cba7789f-551b-4070-8fc2-e358fc458eaf"
                 }
             ]
         }
@@ -26430,6 +26960,20 @@
     ],
     "avatars": [
         {
+            "id": "85bb6cad-ad36-4567-86c9-b4efaf12a2be",
+            "name": "flask",
+            "width": 16,
+            "height": 16,
+            "filename": "flask.png"
+        },
+        {
+            "id": "796a5c90-9228-41e2-922f-12a89913fce2",
+            "name": "flower",
+            "width": 16,
+            "height": 16,
+            "filename": "flower.png"
+        },
+        {
             "id": "b7990a26-880f-4398-9126-bd6b3c63ef48",
             "name": "key",
             "width": 16,
@@ -26442,6 +26986,20 @@
             "width": 16,
             "height": 16,
             "filename": "knife.png"
+        },
+        {
+            "id": "d94bb31b-9e94-411f-ae62-29d12f0b3ff7",
+            "name": "mushroom",
+            "width": 16,
+            "height": 16,
+            "filename": "mushroom.png"
+        },
+        {
+            "id": "deb23be0-81b1-4160-8d9d-7bccb3a29294",
+            "name": "plant",
+            "width": 16,
+            "height": 16,
+            "filename": "plant.png"
         },
         {
             "id": "bc8b990a-3813-435c-9472-af698a2792ac",
@@ -26580,8 +27138,8 @@
         },
         {
             "id": "11",
-            "name": "Empty Chest 1",
-            "symbol": "var_empty_chest_1"
+            "name": "Chest 1",
+            "symbol": "var_chest_0"
         },
         {
             "id": "12",
@@ -26635,8 +27193,23 @@
         },
         {
             "id": "22",
-            "name": "Chest 1",
-            "symbol": "var_chest_1"
+            "name": "Chest 2",
+            "symbol": "var_chest_2"
+        },
+        {
+            "id": "23",
+            "name": "Flask Chest 1",
+            "symbol": "var_flask_chest_1"
+        },
+        {
+            "id": "24",
+            "name": "Flask Chest 2",
+            "symbol": "var_flask_chest_2"
+        },
+        {
+            "id": "25",
+            "name": "Flask Chest 3",
+            "symbol": "var_flask_chest_3"
         }
     ],
     "engineFieldValues": [
@@ -26708,7 +27281,7 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 751,
+        "worldScrollX": 400,
         "worldScrollY": 0,
         "zoom": 125,
         "customColorsEnabled": true,
@@ -26738,9 +27311,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            30,
+            205,
             393,
-            527
+            352
         ],
         "showNavigator": true,
         "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",
