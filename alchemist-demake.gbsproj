@@ -2703,6 +2703,26 @@
                                                         "__collapse": false
                                                     },
                                                     "id": "7b65a526-5993-4712-9ae7-43a4c1b5926a"
+                                                },
+                                                {
+                                                    "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+                                                    "args": {
+                                                        "field": "plat_double_jumps",
+                                                        "variable": "L0",
+                                                        "value": 1,
+                                                        "type": "number"
+                                                    },
+                                                    "id": "1d71d005-5345-4eb1-a7a2-b38491a5ed95"
+                                                },
+                                                {
+                                                    "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+                                                    "args": {
+                                                        "field": "pl_double_jumps",
+                                                        "variable": "L0",
+                                                        "value": 1,
+                                                        "type": "number"
+                                                    },
+                                                    "id": "62c2a001-f918-4467-8ced-385ad6076954"
                                                 }
                                             ],
                                             "false": [
@@ -11855,7 +11875,7 @@
             "backgroundId": "65e74bb5-bd16-41a4-a99c-9410aaad100e",
             "width": 20,
             "height": 18,
-            "type": "LOGO",
+            "type": "TOPDOWN",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
@@ -29896,9 +29916,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 1436,
-        "worldScrollY": 5,
-        "zoom": 200,
+        "worldScrollX": 0,
+        "worldScrollY": 0,
+        "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",
