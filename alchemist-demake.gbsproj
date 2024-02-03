@@ -2854,13 +2854,6 @@
                                                         "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
                                                     },
                                                     "id": "f4074959-b89e-40ba-bd6b-90fe824783e6"
-                                                },
-                                                {
-                                                    "command": "EVENT_ACTOR_ACTIVATE",
-                                                    "args": {
-                                                        "actorId": "94c7818c-7cc3-4bc2-adec-a32c15047913"
-                                                    },
-                                                    "id": "9148314c-7cd0-4ac0-909d-7bc78009c0a1"
                                                 }
                                             ],
                                             "false": [
@@ -3320,6 +3313,31 @@
                     "symbol": "actor_49",
                     "script": [
                         {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "26",
+                                "operator": "<",
+                                "comparator": 3,
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                " I'm not sleepy"
+                                            ],
+                                            "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                                        },
+                                        "id": "2344b356-b825-4e6c-b5dc-5fead8ca0388"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "9d7106ff-e803-4519-b53d-3785d369388d"
+                        },
+                        {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "ea1d052c-6985-4422-a7ab-6d637697da2b",
@@ -3331,30 +3349,7 @@
                             "id": "207f9ff6-1d52-449e-881a-f392df9a0760"
                         }
                     ],
-                    "startScript": [
-                        {
-                            "command": "EVENT_IF_VALUE",
-                            "args": {
-                                "variable": "26",
-                                "operator": "<",
-                                "comparator": 3,
-                                "__collapseElse": true
-                            },
-                            "children": {
-                                "true": [
-                                    {
-                                        "command": "EVENT_ACTOR_DEACTIVATE",
-                                        "args": {
-                                            "actorId": "$self$"
-                                        },
-                                        "id": "08d15bf5-c51d-4916-be34-c85fdbc3a3cd"
-                                    }
-                                ],
-                                "false": []
-                            },
-                            "id": "cc909cb8-32a0-4fee-a50d-0d7ef3958fce"
-                        }
-                    ],
+                    "startScript": [],
                     "updateScript": [],
                     "hit1Script": [],
                     "hit2Script": [],
@@ -12263,7 +12258,7 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Thanks for playing!\nTry also the original!"
+                            "Thanks for playing!\nTry also the original!\nGame made by\nRicardo Bustamante\nricardo@busta.dev"
                         ],
                         "avatarId": ""
                     },
@@ -13749,6 +13744,17 @@
                         "avatarId": "5e478c2d-5510-495b-a159-606ed328a933"
                     },
                     "id": "b39ca96a-ecef-4a58-b962-8011890bbfba"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "dc32604a-4f26-43ce-814a-ca9fbba4d30b",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "3289761a-7a6e-45c4-b899-0470f36ce7c5"
                 }
             ],
             "playerHit1Script": [],
@@ -29881,7 +29887,7 @@
     ],
     "settings": {
         "startSceneId": "2439cabb-aafc-4d20-8ee4-9db792178d1a",
-        "startX": 13,
+        "startX": 9,
         "startY": 3,
         "startMoveSpeed": 1,
         "startAnimSpeed": 15,
@@ -29890,8 +29896,8 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 827,
-        "worldScrollY": 16,
+        "worldScrollX": 1436,
+        "worldScrollY": 5,
         "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
