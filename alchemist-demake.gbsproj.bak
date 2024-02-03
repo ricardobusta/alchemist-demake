@@ -16,8 +16,8 @@
             "autoFadeSpeed": 2,
             "id": "2439cabb-aafc-4d20-8ee4-9db792178d1a",
             "symbol": "scene_1",
-            "x": 267.4,
-            "y": 61.2,
+            "x": 60,
+            "y": 30,
             "actors": [],
             "triggers": [],
             "script": [
@@ -65,8 +65,8 @@
             "autoFadeSpeed": 1,
             "id": "9a682b26-8df1-4977-8c9e-375353eddf54",
             "symbol": "scene_2",
-            "x": 458.39999999999975,
-            "y": 62.800000000000026,
+            "x": 239.89999999999975,
+            "y": 30,
             "actors": [],
             "triggers": [],
             "script": [
@@ -1572,8 +1572,8 @@
             "autoFadeSpeed": 1,
             "id": "4728d085-9031-48a7-bb44-6ccbc17b62ff",
             "symbol": "scene_3",
-            "x": 731.4000000000001,
-            "y": 351.40000000000015,
+            "x": 728.4000000000001,
+            "y": 213.40000000000015,
             "actors": [
                 {
                     "name": "Door In",
@@ -2449,8 +2449,8 @@
             "autoFadeSpeed": 1,
             "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9",
             "symbol": "scene_4",
-            "x": 835.9999999999993,
-            "y": 66.00000000000003,
+            "x": 607.4999999999993,
+            "y": 30,
             "actors": [
                 {
                     "name": "Door Out",
@@ -2487,15 +2487,40 @@
                                 ],
                                 "false": [
                                     {
-                                        "command": "EVENT_SWITCH_SCENE",
+                                        "command": "EVENT_IF_VALUE",
                                         "args": {
-                                            "sceneId": "4728d085-9031-48a7-bb44-6ccbc17b62ff",
-                                            "x": 37,
-                                            "y": 13,
-                                            "direction": "left",
-                                            "fadeSpeed": "2"
+                                            "variable": "26",
+                                            "operator": "<",
+                                            "comparator": 3,
+                                            "__collapseElse": true
                                         },
-                                        "id": "fba0afef-31c4-4963-8064-9cd8743786d7"
+                                        "children": {
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "4728d085-9031-48a7-bb44-6ccbc17b62ff",
+                                                        "x": 37,
+                                                        "y": 13,
+                                                        "direction": "left",
+                                                        "fadeSpeed": "2"
+                                                    },
+                                                    "id": "fba0afef-31c4-4963-8064-9cd8743786d7"
+                                                }
+                                            ],
+                                            "false": []
+                                        },
+                                        "id": "6e742a5b-6e12-46bd-8f87-328f0616aedf"
+                                    },
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                " I am too sleepy, \n I can't leave now."
+                                            ],
+                                            "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                                        },
+                                        "id": "db142627-a28b-4f91-bd45-f28d01dd2769"
                                     }
                                 ]
                             },
@@ -2579,7 +2604,7 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            " I can make \n Hydro-potion now"
+                                                            " I can brew\n Hydro-potion now"
                                                         ],
                                                         "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
                                                         "__collapse": false
@@ -2619,23 +2644,41 @@
                                                 {
                                                     "command": "EVENT_INC_VALUE",
                                                     "args": {
-                                                        "variable": "26"
+                                                        "variable": "26",
+                                                        "__collapse": true
                                                     },
                                                     "id": "60876ed6-f1b1-4894-ab66-6cbc89e7c0b7"
                                                 },
                                                 {
                                                     "command": "EVENT_FADE_OUT",
                                                     "args": {
-                                                        "speed": 1
+                                                        "speed": 1,
+                                                        "__collapse": true
                                                     },
                                                     "id": "ad2c328f-bb79-46a1-a0d4-e36904ad6db9"
                                                 },
                                                 {
                                                     "command": "EVENT_FADE_IN",
                                                     "args": {
-                                                        "speed": 1
+                                                        "speed": 1,
+                                                        "text": [
+                                                            " I can make \n Hydro-potion now"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": true
                                                     },
                                                     "id": "958b4405-7ce2-4e29-9a63-fecb77cf596e"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            " I feel like I can\n swim now"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "09021289-0540-43ae-aad9-c85534006c33"
                                                 }
                                             ],
                                             "false": [
@@ -2656,16 +2699,6 @@
                                 ],
                                 "true1": [
                                     {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Progress 1"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "f6edeb15-eeb2-4adb-bbc9-4e9ce5d0c203"
-                                    },
-                                    {
                                         "command": "EVENT_IF_EXPRESSION",
                                         "args": {
                                             "expression": "$02$ >= 3 && $07$ >= 5 && $09$ >= 1",
@@ -2677,10 +2710,10 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "Ingredients!"
+                                                            " I can concotion\n Feather Potion now"
                                                         ],
-                                                        "avatarId": "",
-                                                        "__collapse": true
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": false
                                                     },
                                                     "id": "84c55232-2258-4306-9fa8-e70a6cd010b9"
                                                 },
@@ -2695,7 +2728,7 @@
                                                         "minValue": "0",
                                                         "maxValue": "32767",
                                                         "clamp": false,
-                                                        "__collapse": false
+                                                        "__collapse": true
                                                     },
                                                     "id": "41c2a2bc-43b6-40c1-8c57-1b4b48e3370c"
                                                 },
@@ -2710,7 +2743,7 @@
                                                         "minValue": "0",
                                                         "maxValue": "32767",
                                                         "clamp": false,
-                                                        "__collapse": false
+                                                        "__collapse": true
                                                     },
                                                     "id": "95f9e336-d92e-4530-8aca-7cd6c3b5838d"
                                                 },
@@ -2732,9 +2765,41 @@
                                                 {
                                                     "command": "EVENT_INC_VALUE",
                                                     "args": {
-                                                        "variable": "26"
+                                                        "variable": "26",
+                                                        "__collapse": true
                                                     },
                                                     "id": "676a172e-9ccb-488a-947d-347968fc56d3"
+                                                },
+                                                {
+                                                    "command": "EVENT_FADE_OUT",
+                                                    "args": {
+                                                        "speed": 1,
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "ea569963-931f-44f1-89a6-3579a06e71d9"
+                                                },
+                                                {
+                                                    "command": "EVENT_FADE_IN",
+                                                    "args": {
+                                                        "speed": 1,
+                                                        "text": [
+                                                            " I can make \n Hydro-potion now"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "2198bcfb-96cc-4e9d-8be9-45ed68d16f4c"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            " I feel like I can\n jump more than once"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": false
+                                                    },
+                                                    "id": "7b65a526-5993-4712-9ae7-43a4c1b5926a"
                                                 }
                                             ],
                                             "false": [
@@ -2742,11 +2807,11 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": [
-                                                            "Nope\n"
+                                                            " I still need some\n ingredients"
                                                         ],
-                                                        "avatarId": ""
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
                                                     },
-                                                    "id": "3aee8589-0405-4cd6-b30e-eae320c696f5"
+                                                    "id": "cae11cfa-552e-49ba-bb77-ffa8cfc80dae"
                                                 }
                                             ]
                                         },
@@ -2755,24 +2820,158 @@
                                 ],
                                 "true2": [
                                     {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Progress 2"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "4da2c351-9e61-4870-bd15-d0fde48b34d6"
-                                    },
-                                    {
                                         "command": "EVENT_IF_EXPRESSION",
                                         "args": {
-                                            "expression": "$02$ >= 5 && $09$ >= 1",
+                                            "expression": "$02$ >= 2 && $08$ >= 5 && $09$ >= 1",
                                             "__collapseElse": false
                                         },
                                         "children": {
-                                            "true": [],
-                                            "false": []
+                                            "true": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            " I can develop\n Dream Potion now"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": false
+                                                    },
+                                                    "id": "6b8a537b-906d-4193-a09c-77c569629e78"
+                                                },
+                                                {
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "8",
+                                                        "operation": "sub",
+                                                        "other": "val",
+                                                        "vectorY": "L0",
+                                                        "value": 5,
+                                                        "minValue": "0",
+                                                        "maxValue": "32767",
+                                                        "clamp": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "dc4c4c0f-690f-41e2-9861-5e56252c2ae6"
+                                                },
+                                                {
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "2",
+                                                        "operation": "sub",
+                                                        "other": "val",
+                                                        "vectorY": "L0",
+                                                        "value": 2,
+                                                        "minValue": "0",
+                                                        "maxValue": "32767",
+                                                        "clamp": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "0e760440-c242-47d0-934d-d46dccb72a14"
+                                                },
+                                                {
+                                                    "command": "EVENT_VARIABLE_MATH",
+                                                    "args": {
+                                                        "vectorX": "9",
+                                                        "operation": "sub",
+                                                        "other": "val",
+                                                        "vectorY": "L0",
+                                                        "value": 1,
+                                                        "minValue": "0",
+                                                        "maxValue": "32767",
+                                                        "clamp": false,
+                                                        "__collapse": true
+                                                    },
+                                                    "id": "dbbe8afd-a264-4680-a16d-6ad441579626"
+                                                },
+                                                {
+                                                    "command": "EVENT_INC_VALUE",
+                                                    "args": {
+                                                        "variable": "26"
+                                                    },
+                                                    "id": "40968b3c-7c55-4806-9cf5-49cffe8b75ec"
+                                                },
+                                                {
+                                                    "command": "EVENT_ACTOR_EMOTE",
+                                                    "args": {
+                                                        "actorId": "$self$",
+                                                        "emoteId": "70a4ce25-1fe4-4ab1-aee9-21255e70fb76"
+                                                    },
+                                                    "id": "22494291-8d4b-4223-8788-5806df52723f"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            " ...?",
+                                                            " I don't feel\n any different"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                                                        "__collapse": false
+                                                    },
+                                                    "id": "0d12def5-9dd8-4a5f-a7f6-ced1b7d85eb1"
+                                                },
+                                                {
+                                                    "command": "EVENT_WAIT",
+                                                    "args": {
+                                                        "time": 1,
+                                                        "frames": 30
+                                                    },
+                                                    "id": "03b65e19-db07-4a52-bad8-c0c4e9f30a13"
+                                                },
+                                                {
+                                                    "command": "EVENT_FADE_OUT",
+                                                    "args": {
+                                                        "speed": 1
+                                                    },
+                                                    "id": "fa87512b-b228-4e2c-8b2d-e377c3bda137"
+                                                },
+                                                {
+                                                    "command": "EVENT_FADE_IN",
+                                                    "args": {
+                                                        "speed": 1
+                                                    },
+                                                    "id": "62fb151a-3928-449c-95db-7d287a281eb3"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            "You feel dizzy, now your\neyes are heavier"
+                                                        ],
+                                                        "avatarId": ""
+                                                    },
+                                                    "id": "7fac683d-af4b-4e80-b4ec-0005c8774c75"
+                                                },
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            " Maybe I should get\n some sleep"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                                                    },
+                                                    "id": "f4074959-b89e-40ba-bd6b-90fe824783e6"
+                                                },
+                                                {
+                                                    "command": "EVENT_ACTOR_ACTIVATE",
+                                                    "args": {
+                                                        "actorId": "94c7818c-7cc3-4bc2-adec-a32c15047913"
+                                                    },
+                                                    "id": "9148314c-7cd0-4ac0-909d-7bc78009c0a1"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "command": "EVENT_TEXT",
+                                                    "args": {
+                                                        "text": [
+                                                            " I still need some\n ingredients"
+                                                        ],
+                                                        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                                                    },
+                                                    "id": "a5c7348e-e605-40d5-b384-a41e6e70813a"
+                                                }
+                                            ]
                                         },
                                         "id": "a3150618-c415-4997-9333-155dfbcc7d7e"
                                     }
@@ -2790,7 +2989,18 @@
                                 "true13": [],
                                 "true14": [],
                                 "true15": [],
-                                "false": []
+                                "false": [
+                                    {
+                                        "command": "EVENT_TEXT",
+                                        "args": {
+                                            "text": [
+                                                " I made all potions\n for now"
+                                            ],
+                                            "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                                        },
+                                        "id": "06a5d5b9-0aac-4067-911a-f70a66a6e088"
+                                    }
+                                ]
                             },
                             "id": "ee2e1a27-19c6-48d9-81c1-e158962ff7de"
                         }
@@ -2822,7 +3032,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Hydro-potion recipe:\nGrass x5\nFlask x1"
+                                    "Hydro Potion recipe:\nGrass x5\nFlask x1"
                                 ],
                                 "avatarId": ""
                             },
@@ -2866,7 +3076,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Feather-potion recipe:\nGrass x3\nFlower x5\nFlask x1"
+                                    "Feather Potion recipe:\nGrass x3\nFlower x5\nFlask x1"
                                 ],
                                 "avatarId": ""
                             },
@@ -2910,7 +3120,7 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Dream potion recipe\nGrass x2\nMushroom x5\nFlask x1"
+                                    "Dream Potion recipe\nGrass x2\nMushroom x5\nFlask x1"
                                 ],
                                 "avatarId": ""
                             },
@@ -3190,6 +3400,64 @@
                     "hit3Script": [],
                     "id": "3ca3ad09-e1ea-4280-85cf-15379cc7095b",
                     "x": 14,
+                    "y": 14
+                },
+                {
+                    "name": "Bed",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "96c9ac8b-b91f-4250-ad47-de02ba035a31",
+                    "direction": "up",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_49",
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "ea1d052c-6985-4422-a7ab-6d637697da2b",
+                                "x": 0,
+                                "y": 0,
+                                "direction": "",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "207f9ff6-1d52-449e-881a-f392df9a0760"
+                        }
+                    ],
+                    "startScript": [
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "26",
+                                "operator": "<",
+                                "comparator": 3,
+                                "__collapseElse": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "args": {
+                                            "actorId": "$self$"
+                                        },
+                                        "id": "08d15bf5-c51d-4916-be34-c85fdbc3a3cd"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "cc909cb8-32a0-4fee-a50d-0d7ef3958fce"
+                        }
+                    ],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "94c7818c-7cc3-4bc2-adec-a32c15047913",
+                    "x": 2,
                     "y": 14
                 }
             ],
@@ -5811,8 +6079,8 @@
             "autoFadeSpeed": 1,
             "id": "9e9aeb10-4460-4222-a125-7f5e21f10607",
             "symbol": "scene_5",
-            "x": 76.00000000000003,
-            "y": 241.59999999999968,
+            "x": 60,
+            "y": 210.59999999999968,
             "actors": [
                 {
                     "name": "Plant 1",
@@ -9372,8 +9640,8 @@
             "autoFadeSpeed": 1,
             "id": "677eeb3e-88bd-4b3d-a048-659a0d826fcf",
             "symbol": "scene_6",
-            "x": 74.19999999999891,
-            "y": 540.0000000000001,
+            "x": 731,
+            "y": 387.0000000000001,
             "actors": [
                 {
                     "name": "Plant 9",
@@ -10937,15 +11205,7 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
+                15,
                 0,
                 0,
                 0,
@@ -10970,6 +11230,7 @@
                 0,
                 0,
                 0,
+                15,
                 0,
                 0,
                 0,
@@ -11005,7 +11266,14 @@
                 0,
                 0,
                 0,
+                15,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
                 0,
                 0,
                 0,
@@ -11100,8 +11368,8 @@
             "autoFadeSpeed": 1,
             "id": "70cee980-43c2-4ebf-9d62-0c2f2870dcf7",
             "symbol": "scene_7",
-            "x": 902.1999999999994,
-            "y": 532.2,
+            "x": 216.19999999999936,
+            "y": 496.20000000000005,
             "actors": [
                 {
                     "name": "Flask Chest 3",
@@ -11960,11 +12228,18 @@
             "autoFadeSpeed": 1,
             "id": "dc32604a-4f26-43ce-814a-ca9fbba4d30b",
             "symbol": "scene_8",
-            "x": 1202.000000000001,
-            "y": 69.59999999999997,
+            "x": 1157.500000000001,
+            "y": 30,
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "48d90cc7-9a29-4044-8f3b-cddaa7e05086"
+                },
                 {
                     "command": "EVENT_AWAIT_INPUT",
                     "args": {
@@ -11978,14 +12253,32 @@
                     "id": "423de133-dc4c-47d6-97c2-bc13d8341287"
                 },
                 {
+                    "command": "EVENT_PALETTE_SET_UI",
+                    "args": {
+                        "palette": "default-ui"
+                    },
+                    "id": "0c0f1c71-d425-44ab-bbea-27a901464acd"
+                },
+                {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Thanks for playing!"
+                            "Thanks for playing!\nTry also the original!"
                         ],
                         "avatarId": ""
                     },
                     "id": "9af88da7-c313-46f1-9c68-3c5b6ba2da07"
+                },
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "2439cabb-aafc-4d20-8ee4-9db792178d1a",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "2399adef-6a4f-43d2-9be5-48e2711e219b"
                 }
             ],
             "playerHit1Script": [],
@@ -12365,8 +12658,8 @@
             "autoFadeSpeed": 1,
             "id": "4c92ed7b-0b3d-4b42-8b1f-89a04de93db2",
             "symbol": "scene_9",
-            "x": 1015.6,
-            "y": 67.55555555555556,
+            "x": 786.6,
+            "y": 30,
             "actors": [
                 {
                     "name": "",
@@ -12412,7 +12705,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "dc080b66-7907-4175-8b44-ac17ee68edef",
-                    "x": 4,
+                    "x": 3,
                     "y": 10
                 },
                 {
@@ -12504,7 +12797,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "9b645865-4201-4eef-9220-59f675fcdfe8",
-                    "x": 15,
+                    "x": 14,
                     "y": 10
                 },
                 {
@@ -12551,7 +12844,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "f1ca8a59-dfe3-43d6-a458-13ed5e4fd48e",
-                    "x": 7,
+                    "x": 6,
                     "y": 6
                 },
                 {
@@ -12598,7 +12891,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "28ca60be-7754-4b8d-bd53-ea5810ecd13b",
-                    "x": 12,
+                    "x": 11,
                     "y": 6
                 },
                 {
@@ -12617,25 +12910,26 @@
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_IF_FALSE",
+                            "command": "EVENT_IF_VALUE",
                             "args": {
-                                "variable": "4",
-                                "__collapseElse": true,
-                                "__comment": false
+                                "variable": "26",
+                                "operator": "<",
+                                "comparator": 1,
+                                "__collapseElse": true
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "command": "EVENT_ACTOR_HIDE",
                                         "args": {
                                             "actorId": "$self$"
                                         },
-                                        "id": "d1a15a3a-317b-4f8f-8972-768d897b1a0c"
+                                        "id": "3282a053-4a1f-4d2b-a6ab-41dec4423d2d"
                                     }
                                 ],
                                 "false": []
                             },
-                            "id": "d102e730-34b3-4c0e-8bc5-038dbf6af611"
+                            "id": "17320748-4fa8-4227-a136-28a7427bee0a"
                         }
                     ],
                     "updateScript": [],
@@ -12662,25 +12956,26 @@
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_IF_FALSE",
+                            "command": "EVENT_IF_VALUE",
                             "args": {
-                                "variable": "5",
-                                "__collapseElse": true,
-                                "__comment": false
+                                "variable": "26",
+                                "operator": "<",
+                                "comparator": 2,
+                                "__collapseElse": true
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "command": "EVENT_ACTOR_HIDE",
                                         "args": {
                                             "actorId": "$self$"
                                         },
-                                        "id": "aa90f0cd-2748-4a82-b4a5-b846c9f98a2b"
+                                        "id": "e2f3cde6-5119-498d-a60c-036915f1e20f"
                                     }
                                 ],
                                 "false": []
                             },
-                            "id": "8888ceb5-e5f4-4ce5-bdb2-7ce7143b0ed4"
+                            "id": "ff390eaf-97ee-4fea-a655-f685360f2c40"
                         }
                     ],
                     "updateScript": [],
@@ -12707,25 +13002,26 @@
                     "script": [],
                     "startScript": [
                         {
-                            "command": "EVENT_IF_FALSE",
+                            "command": "EVENT_IF_VALUE",
                             "args": {
-                                "variable": "6",
-                                "__collapseElse": true,
-                                "__comment": false
+                                "variable": "26",
+                                "operator": "<",
+                                "comparator": 3,
+                                "__collapseElse": true
                             },
                             "children": {
                                 "true": [
                                     {
-                                        "command": "EVENT_ACTOR_DEACTIVATE",
+                                        "command": "EVENT_ACTOR_HIDE",
                                         "args": {
                                             "actorId": "$self$"
                                         },
-                                        "id": "a1bc9ac5-0bea-495f-bc32-77389b56e558"
+                                        "id": "f772645c-f3bb-4936-8f07-dfb0a3577d40"
                                     }
                                 ],
                                 "false": []
                             },
-                            "id": "cc308d46-384d-4869-91e7-de8116e0cd08"
+                            "id": "cfbadd7e-4116-4ccd-8898-a5135d188927"
                         }
                     ],
                     "updateScript": [],
@@ -12824,7 +13120,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "3e928669-e293-4fde-96ff-1aa710ebe939",
-                    "x": 5,
+                    "x": 7,
                     "y": 6
                 },
                 {
@@ -12870,7 +13166,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "22cc27e8-6ffb-473e-a80e-3c2de56c5aac",
-                    "x": 10,
+                    "x": 12,
                     "y": 6
                 },
                 {
@@ -12915,7 +13211,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "abece38a-a64c-446d-ac42-2793534e333e",
-                    "x": 13,
+                    "x": 15,
                     "y": 10
                 },
                 {
@@ -12961,7 +13257,7 @@
                     "hit2Script": [],
                     "hit3Script": [],
                     "id": "da327cfb-d6c5-4e0b-a10a-12962be3c9d9",
-                    "x": 2,
+                    "x": 4,
                     "y": 10
                 }
             ],
@@ -13371,8 +13667,8 @@
             "autoFadeSpeed": 1,
             "id": "18ef8413-ce29-4561-b00f-53486eb47233",
             "symbol": "scene_10",
-            "x": 648.2222222222225,
-            "y": 63.1111111111112,
+            "x": 423.7222222222225,
+            "y": 31,
             "actors": [],
             "triggers": [],
             "script": [
@@ -13405,12 +13701,54 @@
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
                         "sceneId": "fad6fe45-a6cb-495d-9366-bb63680ef4c9",
-                        "x": 2,
+                        "x": 3,
                         "y": 14,
                         "direction": "right",
                         "fadeSpeed": "2"
                     },
                     "id": "3280f950-baed-43e7-9978-04e5e3623a11"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
+        },
+        {
+            "name": "Final Dream",
+            "backgroundId": "3525b96c-d695-41c2-9728-09d143e36904",
+            "width": 20,
+            "height": 18,
+            "type": "TOPDOWN",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "ea1d052c-6985-4422-a7ab-6d637697da2b",
+            "symbol": "scene_11",
+            "x": 972,
+            "y": 30,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "4035af64-465c-4118-ac00-77f92c3c50a4"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            " Congratulations,\n Alchemist",
+                            " You have completed\n all the tasks",
+                            " and transcended!\n",
+                            " Welcome to the\n dream"
+                        ],
+                        "avatarId": "5e478c2d-5510-495b-a159-606ed328a933"
+                    },
+                    "id": "b39ca96a-ecef-4a58-b962-8011890bbfba"
                 }
             ],
             "playerHit1Script": [],
@@ -17828,6 +18166,378 @@
             ]
         },
         {
+            "id": "3525b96c-d695-41c2-9728-09d143e36904",
+            "name": "dream2",
+            "symbol": "bg_dream2",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "dream2.png",
+            "tileColors": [
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4
+            ]
+        },
+        {
             "id": "65e74bb5-bd16-41a4-a99c-9410aaad100e",
             "name": "game_over",
             "symbol": "bg_game_over",
@@ -18728,7 +19438,7 @@
                 7,
                 7,
                 7,
-                3,
+                7,
                 7,
                 7,
                 7,
@@ -19343,11 +20053,11 @@
                 1,
                 1,
                 1,
-                1,
-                1,
-                1,
-                1,
-                1,
+                2,
+                2,
+                2,
+                2,
+                2,
                 1,
                 1,
                 1,
@@ -24354,6 +25064,201 @@
     ],
     "spriteSheets": [
         {
+            "id": "96c9ac8b-b91f-4250-ad47-de02ba035a31",
+            "name": "bed",
+            "symbol": "sprite_bed",
+            "numFrames": 0.5,
+            "type": "animated",
+            "filename": "bed.png",
+            "checksum": "13043dd2948e82cf09173fcc9c057d83534d282c",
+            "width": 8,
+            "height": 8,
+            "states": [
+                {
+                    "id": "a1297b3c-4f57-4933-8dbd-5fd6068e3f55",
+                    "name": "",
+                    "animationType": "multi",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "16c767f5-24e1-4a02-bdad-b13209cbce4f",
+                            "frames": [
+                                {
+                                    "id": "dfd1e7c0-8591-4602-b66a-d6a13bcd3d0a",
+                                    "tiles": [
+                                        {
+                                            "id": "894b1e84-95d4-4c14-8c1f-ff28288665de",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 32,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "4f671189-a12f-48d1-b58c-1721c37f9593",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 40,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "b3f43e9e-a903-4aff-a1ce-22fad3dd1ac1",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": -8,
+                                            "palette": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "objPalette": "OBP0",
+                                            "paletteIndex": 0,
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b4d004cc-a29b-4dc0-9b03-97c8c7447602",
+                            "frames": [
+                                {
+                                    "id": "c0ade3a2-5cbd-4a4b-ae0a-1d0d6c24c994",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1bc29358-e70b-4e0a-b27a-aea7928a2760",
+                            "frames": [
+                                {
+                                    "id": "d0401a57-0321-4504-aaca-f249d8e20ca7",
+                                    "tiles": [
+                                        {
+                                            "id": "1ebaadb1-5d6f-4cb1-a3b0-ab69638be14e",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 16,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "005511bb-f285-4368-bb0c-5c8ebd507f2a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 24,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "08ec4f5c-3bad-4cd2-8896-e0be3237d4eb",
+                            "frames": [
+                                {
+                                    "id": "ca10e8cd-6da6-41bc-be4c-22ae08518e46",
+                                    "tiles": [
+                                        {
+                                            "id": "3a628815-bf20-4a50-8564-03be7de09727",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "a1d48105-c251-418b-8ed2-661cc162b7fc",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f1ad4dda-1441-4af7-902a-d70c8fdd8050",
+                            "frames": [
+                                {
+                                    "id": "97e5955a-3c87-4c0e-a03b-e7f521510063",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "23c2d7c2-ad25-4642-9d44-f717a8b541ad",
+                            "frames": [
+                                {
+                                    "id": "0d3b2cd4-bc2d-43ca-989b-0ceb644800aa",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "bcc4d712-7064-4843-843c-8cb4abd289fa",
+                            "frames": [
+                                {
+                                    "id": "6280c3c1-cb98-4cb4-a3de-3b3b055afa1b",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6ea11062-c0f3-4561-89c6-7276d1fc9633",
+                            "frames": [
+                                {
+                                    "id": "ef998717-0e28-46d0-8c15-c3e8ba056eab",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 0,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
             "id": "9858cb7f-36aa-4b27-bc86-590754d1cf09",
             "name": "book",
             "symbol": "sprite_book",
@@ -28607,6 +29512,13 @@
     ],
     "avatars": [
         {
+            "id": "5e478c2d-5510-495b-a159-606ed328a933",
+            "name": "dreamer",
+            "width": 16,
+            "height": 16,
+            "filename": "dreamer.png"
+        },
+        {
             "id": "85bb6cad-ad36-4567-86c9-b4efaf12a2be",
             "name": "flask",
             "width": 16,
@@ -28735,28 +29647,13 @@
         },
         {
             "id": "2",
-            "name": "Amount Plant",
-            "symbol": "var_amount_plant"
+            "name": "Amount Leaf",
+            "symbol": "var_amount_leaf"
         },
         {
             "id": "3",
             "name": "Plant 1 Picked",
             "symbol": "var_plant_1_picked"
-        },
-        {
-            "id": "4",
-            "name": "Got Potion 1",
-            "symbol": "var_got_potion_1"
-        },
-        {
-            "id": "5",
-            "name": "Got Potion 2",
-            "symbol": "var_got_potion_2"
-        },
-        {
-            "id": "6",
-            "name": "Got Potion 3",
-            "symbol": "var_got_potion_3"
         },
         {
             "id": "7",
@@ -28993,8 +29890,8 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 1452,
-        "worldScrollY": 0,
+        "worldScrollX": 1545,
+        "worldScrollY": 28,
         "zoom": 200,
         "customColorsEnabled": true,
         "sgbEnabled": false,
