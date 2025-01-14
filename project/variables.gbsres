@@ -1,0 +1,190 @@
+{
+  "_resourceType": "variables",
+  "variables": [
+    {
+      "id": "0",
+      "name": "Got Knife",
+      "symbol": "var_got_knife"
+    },
+    {
+      "id": "1",
+      "name": "Saw Intro",
+      "symbol": "var_saw_intro"
+    },
+    {
+      "id": "2",
+      "name": "Amount Leaf",
+      "symbol": "var_amount_leaf"
+    },
+    {
+      "id": "3",
+      "name": "Plant 1 Picked",
+      "symbol": "var_plant_1_picked"
+    },
+    {
+      "id": "7",
+      "name": "Amount Flower",
+      "symbol": "var_amount_flower"
+    },
+    {
+      "id": "8",
+      "name": "Amount Mushroom",
+      "symbol": "var_amount_mushroom"
+    },
+    {
+      "id": "9",
+      "name": "Amount Flask",
+      "symbol": "var_amount_flask"
+    },
+    {
+      "id": "10",
+      "name": "Got Key",
+      "symbol": "var_got_key"
+    },
+    {
+      "id": "11",
+      "name": "Chest 1",
+      "symbol": "var_chest_0"
+    },
+    {
+      "id": "12",
+      "name": "Plant 2 Picked",
+      "symbol": "var_plant_2_picked"
+    },
+    {
+      "id": "13",
+      "name": "Plant 3 Picked",
+      "symbol": "var_plant_3_picked"
+    },
+    {
+      "id": "14",
+      "name": "Plant 4 Picked",
+      "symbol": "var_plant_4_picked"
+    },
+    {
+      "id": "15",
+      "name": "Plant 5 Picked",
+      "symbol": "var_plant_5_picked"
+    },
+    {
+      "id": "16",
+      "name": "Plant 6 Picked",
+      "symbol": "var_plant_6_picked"
+    },
+    {
+      "id": "17",
+      "name": "Plant 7 Picked",
+      "symbol": "var_plant_7_picked"
+    },
+    {
+      "id": "18",
+      "name": "Plant 8 Picked",
+      "symbol": "var_plant_8_picked"
+    },
+    {
+      "id": "19",
+      "name": "Plant 9 Picked",
+      "symbol": "var_plant_9_picked"
+    },
+    {
+      "id": "20",
+      "name": "Plant 10 Picked",
+      "symbol": "var_plant_10_picked"
+    },
+    {
+      "id": "21",
+      "name": "Plant 11 Picked",
+      "symbol": "var_plant_11_picked"
+    },
+    {
+      "id": "22",
+      "name": "Chest 2",
+      "symbol": "var_chest_2"
+    },
+    {
+      "id": "23",
+      "name": "Flask Chest 1",
+      "symbol": "var_flask_chest_1"
+    },
+    {
+      "id": "24",
+      "name": "Flask Chest 2",
+      "symbol": "var_flask_chest_2"
+    },
+    {
+      "id": "25",
+      "name": "Flask Chest 3",
+      "symbol": "var_flask_chest_3"
+    },
+    {
+      "id": "26",
+      "name": "Cauldron Progress",
+      "symbol": "var_cauldron_progress"
+    },
+    {
+      "id": "27",
+      "name": "Flower 1 Picked",
+      "symbol": "var_flower_1_picked"
+    },
+    {
+      "id": "28",
+      "name": "Flower 2 Picked",
+      "symbol": "var_flower_2_picked"
+    },
+    {
+      "id": "29",
+      "name": "Flower 3 Picked",
+      "symbol": "var_flower_3_picked"
+    },
+    {
+      "id": "30",
+      "name": "Flower 4 Picked",
+      "symbol": "var_flower_4_picked"
+    },
+    {
+      "id": "31",
+      "name": "Flower 5 Picked",
+      "symbol": "var_flower_5_picked"
+    },
+    {
+      "id": "32",
+      "name": "Flower 6 Picked",
+      "symbol": "var_flower_6_picked"
+    },
+    {
+      "id": "33",
+      "name": "Shroom 1 Picked",
+      "symbol": "var_shroom_1_picked"
+    },
+    {
+      "id": "34",
+      "name": "Shroom 2 Picked",
+      "symbol": "var_shroom_2_picked"
+    },
+    {
+      "id": "35",
+      "name": "Shroom 3 Picked",
+      "symbol": "var_shroom_3_picked"
+    },
+    {
+      "id": "36",
+      "name": "Shroom 4 Picked",
+      "symbol": "var_shroom_4_picked"
+    },
+    {
+      "id": "37",
+      "name": "Shroom 5 Picked",
+      "symbol": "var_shroom_5_picked"
+    },
+    {
+      "id": "38",
+      "name": "Shroom 6 Picked",
+      "symbol": "var_shroom_6_picked"
+    },
+    {
+      "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9__L0",
+      "name": "Saw Intro",
+      "symbol": "var_saw_intro_1"
+    }
+  ]
+}

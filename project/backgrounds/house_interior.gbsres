@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "5aa7624f-2e15-4881-a13e-bb9943ed1ddd",
+  "name": "house_interior",
+  "symbol": "bg_house_interior",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "house_interior.png",
+  "tileColors": "033d+0412+032+0412+032+0412+032+0412+032+0712+032+0712+032+072+05!07!05!07!05!07b+032+07!0610+07!032+079+06!078+032+074+052+073+06!073+052+073+032+074+052+073+06!073+052+073+032+07!042+07!052+07!05!07!06!073+052+073+03!01!0612+01!0528+",
+  "autoColor": false
+}

@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "f59451ea-50e8-493c-840b-0f8d9d221433",
+  "name": "busta-games",
+  "symbol": "bg_busta_games",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "busta-games.png",
+  "tileColors": "00168+",
+  "autoColor": false
+}

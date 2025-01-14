@@ -1,0 +1,65 @@
+{
+  "_resourceType": "scene",
+  "id": "18ef8413-ce29-4561-b00f-53486eb47233",
+  "_index": 9,
+  "type": "TOPDOWN",
+  "name": "Dream",
+  "symbol": "scene_10",
+  "x": 423.7222222222225,
+  "y": 31,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "e7fc9d9f-e58f-43f7-9c42-7c07e428ed1d",
+  "tilesetId": "",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "8e8eb48a-0063-4620-844f-d52971c2f874"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0d252e48-47a3-4989-afa5-c70d6cc087a8"
+      },
+      "id": "52194fd4-1f89-4a4c-981c-db0821fb26f3"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Wake up, alchemist",
+          "Wake up and complete\nyour experiment"
+        ],
+        "avatarId": ""
+      },
+      "id": "1801ed27-4e4e-42db-b1d0-863844b23a56"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "fad6fe45-a6cb-495d-9366-bb63680ef4c9",
+        "x": {
+          "type": "number",
+          "value": 3
+        },
+        "y": {
+          "type": "number",
+          "value": 14
+        },
+        "direction": "right",
+        "fadeSpeed": "2"
+      },
+      "id": "3280f950-baed-43e7-9978-04e5e3623a11"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00168+"
+}

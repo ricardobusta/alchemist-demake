@@ -1,0 +1,74 @@
+{
+  "_resourceType": "scene",
+  "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9",
+  "_index": 3,
+  "type": "PLATFORM",
+  "name": "House Interior",
+  "symbol": "scene_4",
+  "x": 607.4999999999993,
+  "y": 30,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "5aa7624f-2e15-4881-a13e-bb9943ed1ddd",
+  "tilesetId": "",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d28cd16c-60d2-4987-9b99-59d7a8cd6904"
+      },
+      "id": "dd5c61cc-c030-4c1f-8702-da69bfd63ea3"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "L0",
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "L0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " Oh no, it's night\n already!",
+                " I fell asleep while\n studying!"
+              ],
+              "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+            },
+            "id": "e61e1068-31e2-4e25-bdb1-d2b5486d43f4"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "L0",
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "2e347c91-33df-474d-a429-90b5c3480e91"
+          }
+        ],
+        "false": []
+      },
+      "id": "b9b1e3d6-0cb2-4a7f-81b6-9fadf0b83eb3"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "0051+0f12+002+0f12+002+0f12+002+0f!0010+0f!002+0f!0010+0f!002+0f!008+10!007+0f!002+0f!018+11!017+0f!002+0f!008+10!007+0f!002+0f!008+10!007+0f!002+0f!008+10!007+0f!002+0f!008+10!007+0f!00!0f14+0028+"
+}

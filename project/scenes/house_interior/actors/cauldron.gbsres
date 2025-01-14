@@ -1,0 +1,495 @@
+{
+  "_resourceType": "actor",
+  "id": "e08ed29a-fb77-49a9-8444-2c758f2d3be6",
+  "_index": 1,
+  "symbol": "actor_9",
+  "prefabId": "",
+  "name": "Cauldron",
+  "x": 11,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "1eb7ed7f-940a-4085-a320-ed4b30d3de6d",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_SWITCH",
+      "args": {
+        "variable": "26",
+        "choices": 3,
+        "__collapseCase0": false,
+        "value0": 0,
+        "__collapseCase1": false,
+        "value1": 1,
+        "__collapseCase2": false,
+        "value2": 2,
+        "__collapseCase3": false,
+        "value3": 4,
+        "__collapseCase4": false,
+        "value4": 5,
+        "__collapseCase5": false,
+        "value5": 6,
+        "__collapseCase6": false,
+        "value6": 7,
+        "__collapseCase7": false,
+        "value7": 8,
+        "__collapseCase8": false,
+        "value8": 9,
+        "__collapseCase9": false,
+        "value9": 10,
+        "__collapseCase10": false,
+        "value10": 11,
+        "__collapseCase11": false,
+        "value11": 12,
+        "__collapseCase12": false,
+        "value12": 13,
+        "__collapseCase13": false,
+        "value13": 14,
+        "__collapseCase14": false,
+        "value14": 15,
+        "__collapseCase15": false,
+        "value15": 16,
+        "__collapseElse": false
+      },
+      "children": {
+        "true0": [
+          {
+            "command": "EVENT_IF_EXPRESSION",
+            "args": {
+              "expression": "$02$ >= 5 && $09$ >= 1",
+              "__collapseElse": false,
+              "__collapse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I can brew\n Hydro-potion now"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": false
+                  },
+                  "id": "6ab736c7-0050-44aa-95e8-262f610f04da"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "2",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 5,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "ca6a143d-1869-490f-889c-35a550103625"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "9",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 1,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "cb85dc19-d737-4e83-9b37-f1e07be0c359"
+                },
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "26",
+                    "__collapse": true
+                  },
+                  "id": "60876ed6-f1b1-4894-ab66-6cbc89e7c0b7"
+                },
+                {
+                  "command": "EVENT_FADE_OUT",
+                  "args": {
+                    "speed": 1,
+                    "__collapse": true
+                  },
+                  "id": "ad2c328f-bb79-46a1-a0d4-e36904ad6db9"
+                },
+                {
+                  "command": "EVENT_FADE_IN",
+                  "args": {
+                    "speed": 1,
+                    "text": [
+                      " I can make \n Hydro-potion now"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": true
+                  },
+                  "id": "958b4405-7ce2-4e29-9a63-fecb77cf596e"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I feel like I can\n swim now"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": true
+                  },
+                  "id": "09021289-0540-43ae-aad9-c85534006c33"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I still need some\n ingredients"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                  },
+                  "id": "f7669994-cdf5-43c2-ba0a-147e87a5c64a"
+                }
+              ]
+            },
+            "id": "6d4f6849-d887-489d-9bb0-b63c32a16cbf"
+          }
+        ],
+        "true1": [
+          {
+            "command": "EVENT_IF_EXPRESSION",
+            "args": {
+              "expression": "$02$ >= 3 && $07$ >= 5 && $09$ >= 1",
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I can concotion\n Feather Potion now"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": false
+                  },
+                  "id": "84c55232-2258-4306-9fa8-e70a6cd010b9"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "7",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 5,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "41c2a2bc-43b6-40c1-8c57-1b4b48e3370c"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "2",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 3,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "95f9e336-d92e-4530-8aca-7cd6c3b5838d"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "9",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 1,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "7454cef8-58bb-4b4b-9c35-a14d4c34fb1b"
+                },
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "26",
+                    "__collapse": true
+                  },
+                  "id": "676a172e-9ccb-488a-947d-347968fc56d3"
+                },
+                {
+                  "command": "EVENT_FADE_OUT",
+                  "args": {
+                    "speed": 1,
+                    "__collapse": true
+                  },
+                  "id": "ea569963-931f-44f1-89a6-3579a06e71d9"
+                },
+                {
+                  "command": "EVENT_FADE_IN",
+                  "args": {
+                    "speed": 1,
+                    "text": [
+                      " I can make \n Hydro-potion now"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": true
+                  },
+                  "id": "2198bcfb-96cc-4e9d-8be9-45ed68d16f4c"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I feel like I can\n jump more than once"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": false
+                  },
+                  "id": "7b65a526-5993-4712-9ae7-43a4c1b5926a"
+                },
+                {
+                  "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+                  "args": {
+                    "field": "plat_double_jumps",
+                    "variable": "L0",
+                    "value": 1,
+                    "type": "number"
+                  },
+                  "id": "1d71d005-5345-4eb1-a7a2-b38491a5ed95"
+                },
+                {
+                  "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+                  "args": {
+                    "field": "pl_double_jumps",
+                    "variable": "L0",
+                    "value": 1,
+                    "type": "number"
+                  },
+                  "id": "62c2a001-f918-4467-8ced-385ad6076954"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I still need some\n ingredients"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                  },
+                  "id": "cae11cfa-552e-49ba-bb77-ffa8cfc80dae"
+                }
+              ]
+            },
+            "id": "cd149489-450a-4a52-878e-a6e8d6a43067"
+          }
+        ],
+        "true2": [
+          {
+            "command": "EVENT_IF_EXPRESSION",
+            "args": {
+              "expression": "$02$ >= 2 && $08$ >= 5 && $09$ >= 1",
+              "__collapseElse": false
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I can develop\n Dream Potion now"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": false
+                  },
+                  "id": "6b8a537b-906d-4193-a09c-77c569629e78"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "8",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 5,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "dc4c4c0f-690f-41e2-9861-5e56252c2ae6"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "2",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 2,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "0e760440-c242-47d0-934d-d46dccb72a14"
+                },
+                {
+                  "command": "EVENT_VARIABLE_MATH",
+                  "args": {
+                    "vectorX": "9",
+                    "operation": "sub",
+                    "other": "val",
+                    "vectorY": "L0",
+                    "value": 1,
+                    "minValue": "0",
+                    "maxValue": "32767",
+                    "clamp": false,
+                    "__collapse": true
+                  },
+                  "id": "dbbe8afd-a264-4680-a16d-6ad441579626"
+                },
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "26"
+                  },
+                  "id": "40968b3c-7c55-4806-9cf5-49cffe8b75ec"
+                },
+                {
+                  "command": "EVENT_ACTOR_EMOTE",
+                  "args": {
+                    "actorId": "$self$",
+                    "emoteId": "70a4ce25-1fe4-4ab1-aee9-21255e70fb76"
+                  },
+                  "id": "22494291-8d4b-4223-8788-5806df52723f"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " ...?",
+                      " I don't feel\n any different"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac",
+                    "__collapse": false
+                  },
+                  "id": "0d12def5-9dd8-4a5f-a7f6-ced1b7d85eb1"
+                },
+                {
+                  "command": "EVENT_WAIT",
+                  "args": {
+                    "time": 1,
+                    "frames": 30
+                  },
+                  "id": "03b65e19-db07-4a52-bad8-c0c4e9f30a13"
+                },
+                {
+                  "command": "EVENT_FADE_OUT",
+                  "args": {
+                    "speed": 1
+                  },
+                  "id": "fa87512b-b228-4e2c-8b2d-e377c3bda137"
+                },
+                {
+                  "command": "EVENT_FADE_IN",
+                  "args": {
+                    "speed": 1
+                  },
+                  "id": "62fb151a-3928-449c-95db-7d287a281eb3"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      "You feel dizzy, now your\neyes are heavier"
+                    ],
+                    "avatarId": ""
+                  },
+                  "id": "7fac683d-af4b-4e80-b4ec-0005c8774c75"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " Maybe I should get\n some sleep"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                  },
+                  "id": "f4074959-b89e-40ba-bd6b-90fe824783e6"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " I still need some\n ingredients"
+                    ],
+                    "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+                  },
+                  "id": "a5c7348e-e605-40d5-b384-a41e6e70813a"
+                }
+              ]
+            },
+            "id": "a3150618-c415-4997-9333-155dfbcc7d7e"
+          }
+        ],
+        "true3": [],
+        "true4": [],
+        "true5": [],
+        "true6": [],
+        "true7": [],
+        "true8": [],
+        "true9": [],
+        "true10": [],
+        "true11": [],
+        "true12": [],
+        "true13": [],
+        "true14": [],
+        "true15": [],
+        "false": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " I made all potions\n for now"
+              ],
+              "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+            },
+            "id": "06a5d5b9-0aac-4067-911a-f70a66a6e088"
+          }
+        ]
+      },
+      "id": "ee2e1a27-19c6-48d9-81c1-e158962ff7de"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

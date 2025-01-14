@@ -1,0 +1,48 @@
+{
+  "_resourceType": "script",
+  "id": "d28cd16c-60d2-4987-9b99-59d7a8cd6904",
+  "name": "Pause Menu",
+  "symbol": "script_1",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_INPUT_SCRIPT",
+      "args": {
+        "input": [
+          "start"
+        ],
+        "override": true,
+        "__scriptTabs": "press"
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_SCENE_PUSH_STATE",
+            "args": {},
+            "id": "c4c54d9b-1989-41a9-876d-128854a3bc5d"
+          },
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "4c92ed7b-0b3d-4b42-8b1f-89a04de93db2",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "",
+              "fadeSpeed": 1
+            },
+            "id": "c94c1f6d-3a22-4d06-acc0-d0c839883c50"
+          }
+        ]
+      },
+      "id": "0b6248f5-2451-4971-aa8f-0ca43e292766"
+    }
+  ]
+}

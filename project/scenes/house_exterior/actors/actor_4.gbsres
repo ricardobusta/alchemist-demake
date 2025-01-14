@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "2a0b13df-45b9-40a5-86ec-322a3f42cb30",
+  "_index": 9,
+  "symbol": "actor_53",
+  "prefabId": "",
+  "name": "",
+  "x": 4,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "fdc88e77-924b-4ae2-b4b1-e1c64c2cba65",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "<- To the forest"
+        ],
+        "avatarId": ""
+      },
+      "id": "ef679555-b394-4b0b-89bd-f6c8a4d7f8b5"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

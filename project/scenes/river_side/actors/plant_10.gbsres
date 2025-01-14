@@ -1,0 +1,68 @@
+{
+  "_resourceType": "actor",
+  "id": "70922b38-832a-409b-9b56-1eb9458fc37c",
+  "_index": 1,
+  "symbol": "actor_15",
+  "prefabId": "",
+  "name": "Plant 10",
+  "x": 53,
+  "y": 21,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "32285ae9-a8ce-45d7-aa8b-5651ebbb8e54",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "c7ea3a09-19f6-4c21-baf6-b02cf3c74000",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "20"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "2"
+        }
+      },
+      "id": "e69c6419-7aa9-430a-9e1d-23cfe0f16193"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "20",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "20"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "edc99658-a8c4-469a-b99d-1e7232856912"
+          }
+        ],
+        "false": []
+      },
+      "id": "1c21b4f9-bafc-4972-a387-4f147f945434"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

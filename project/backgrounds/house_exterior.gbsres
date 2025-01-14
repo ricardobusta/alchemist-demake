@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "b4f455b5-1a4d-4a5e-bb06-2532207c9d53",
+  "name": "house_exterior",
+  "symbol": "bg_house_exterior",
+  "width": 80,
+  "height": 18,
+  "imageWidth": 640,
+  "imageHeight": 144,
+  "filename": "house_exterior.png",
+  "tileColors": "03c6+07!034e+073+034c+075+034a+077+0348+079+0346+07b+0345+07b+0345+07b+0345+07b+0345+07b+0345+07!022+075+022+07!0345+07b+0324+01e+025+013d+05f0+",
+  "autoColor": false
+}

@@ -1,0 +1,48 @@
+{
+  "_resourceType": "actor",
+  "id": "69b1d944-36e3-4388-9170-5fc5b098a7af",
+  "_index": 4,
+  "symbol": "actor_12",
+  "prefabId": "",
+  "name": "Book3",
+  "x": 7,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "9858cb7f-36aa-4b27-bc86-590754d1cf09",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Dream Potion recipe\nGrass x2\nMushroom x5\nFlask x1"
+        ],
+        "avatarId": ""
+      },
+      "id": "d16d4fe9-8a4e-4e21-830e-fa0715e77882"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          " There's no\n description"
+        ],
+        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+      },
+      "id": "e71317c4-50d9-4893-a948-6bcac6cfa4f3"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

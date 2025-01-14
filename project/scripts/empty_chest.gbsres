@@ -1,0 +1,74 @@
+{
+  "_resourceType": "script",
+  "id": "9c09e1aa-4109-41b2-ab9e-aea5dc1ea338",
+  "name": "Empty Chest",
+  "symbol": "script_4",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Chest Var",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Chest Actor"
+    }
+  },
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "V0",
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Open"
+            },
+            "id": "e06c97ff-df3b-42fc-aea5-a6d0cba1862a"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "V0",
+              "__collapse": false,
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "e7609029-78cb-4aa2-9e9f-8b24edb312b7"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " Empty"
+              ],
+              "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+            },
+            "id": "555e7308-c54a-4982-8917-239741fbc89b"
+          }
+        ],
+        "false": []
+      },
+      "id": "74cf0d08-4b31-4854-9952-506d296b5bd8"
+    }
+  ]
+}

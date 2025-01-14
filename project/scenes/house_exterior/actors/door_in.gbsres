@@ -1,0 +1,45 @@
+{
+  "_resourceType": "actor",
+  "id": "1134f2fa-701f-48fe-aba6-87485faff3a8",
+  "_index": 0,
+  "symbol": "actor_3",
+  "prefabId": "",
+  "name": "Door In",
+  "x": 38,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "a4a1f5a3-0514-4569-9652-7fb5b5c52a19",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "fad6fe45-a6cb-495d-9366-bb63680ef4c9",
+        "x": {
+          "type": "number",
+          "value": 17
+        },
+        "y": {
+          "type": "number",
+          "value": 14
+        },
+        "direction": "left",
+        "fadeSpeed": "2"
+      },
+      "id": "d050e882-382a-44ab-a91c-3b8a6222d513"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

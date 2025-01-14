@@ -1,0 +1,49 @@
+{
+  "_resourceType": "scene",
+  "id": "4c92ed7b-0b3d-4b42-8b1f-89a04de93db2",
+  "_index": 8,
+  "type": "PLATFORM",
+  "name": "Pause",
+  "symbol": "scene_9",
+  "x": 786.6,
+  "y": 30,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "827a6437-f0ed-4e7c-a48f-e79e1abfeea0",
+  "tilesetId": "",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "3f2adacc-794f-4007-9629-37f9d2607047"
+    },
+    {
+      "command": "EVENT_AWAIT_INPUT",
+      "args": {
+        "input": [
+          "a",
+          "b",
+          "start",
+          "select"
+        ]
+      },
+      "id": "561678da-2a5d-4b9a-be75-57953555cd5b"
+    },
+    {
+      "command": "EVENT_SCENE_POP_STATE",
+      "args": {
+        "fadeSpeed": 1
+      },
+      "id": "384c6c70-0d7f-4198-8df4-1d2e8c569ba0"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00168+"
+}

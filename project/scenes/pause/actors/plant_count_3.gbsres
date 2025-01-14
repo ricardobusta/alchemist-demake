@@ -1,0 +1,50 @@
+{
+  "_resourceType": "actor",
+  "id": "abece38a-a64c-446d-ac42-2793534e333e",
+  "_index": 11,
+  "symbol": "actor_28",
+  "prefabId": "",
+  "name": "Plant Count",
+  "x": 15,
+  "y": 10,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "e5236b5f-ebd3-40f6-b2f1-88a61114fb32",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [],
+  "startScript": [
+    {
+      "command": "EVENT_ACTOR_SET_FRAME",
+      "args": {
+        "actorId": "0",
+        "frame": {
+          "type": "variable",
+          "value": "9"
+        }
+      },
+      "id": "4eb26d23-43a2-4558-8ffb-081ac26a5b92"
+    },
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "0abb7261-51df-434b-a0e1-7244e62b0cca",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "9"
+        }
+      },
+      "id": "ca83cf37-c6f1-4f0d-9b04-c787a1340d7b"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

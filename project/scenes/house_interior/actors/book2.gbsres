@@ -1,0 +1,48 @@
+{
+  "_resourceType": "actor",
+  "id": "db7eb120-ae48-4a01-b7bc-3fc9ab01afe9",
+  "_index": 3,
+  "symbol": "actor_11",
+  "prefabId": "",
+  "name": "Book2",
+  "x": 5,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "9858cb7f-36aa-4b27-bc86-590754d1cf09",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Feather Potion recipe:\nGrass x3\nFlower x5\nFlask x1"
+        ],
+        "avatarId": ""
+      },
+      "id": "8901ee48-f24c-4b6e-a90f-64e59d702c19"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          " \"Fly like a bird\""
+        ],
+        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+      },
+      "id": "2914b04d-045c-4305-bcc1-1ec6ecb01410"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

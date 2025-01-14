@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "b5ec5cef-b28a-4593-9375-41f70377f18f",
+  "_index": 8,
+  "symbol": "actor_52",
+  "prefabId": "",
+  "name": "",
+  "x": 15,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "fdc88e77-924b-4ae2-b4b1-e1c64c2cba65",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          " I made a scarecrow\n but the crops..."
+        ],
+        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+      },
+      "id": "b6e1b97f-bb20-458a-b50a-b3e45f48dc8a"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

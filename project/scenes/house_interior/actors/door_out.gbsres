@@ -1,0 +1,115 @@
+{
+  "_resourceType": "actor",
+  "id": "4ac58571-4963-48ca-bfea-4501b0110261",
+  "_index": 0,
+  "symbol": "actor_4",
+  "prefabId": "",
+  "name": "Door Out",
+  "x": 18,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "a4a1f5a3-0514-4569-9652-7fb5b5c52a19",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "10",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "10"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " Is the door locked?\n Where are the keys?"
+              ],
+              "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+            },
+            "id": "60855fdb-13e2-46f0-98ae-6b6240926558"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "26",
+              "operator": "<",
+              "comparator": 3,
+              "__collapseElse": true,
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "26"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 3
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SWITCH_SCENE",
+                  "args": {
+                    "sceneId": "4728d085-9031-48a7-bb44-6ccbc17b62ff",
+                    "x": {
+                      "type": "number",
+                      "value": 37
+                    },
+                    "y": {
+                      "type": "number",
+                      "value": 13
+                    },
+                    "direction": "left",
+                    "fadeSpeed": "2"
+                  },
+                  "id": "fba0afef-31c4-4963-8064-9cd8743786d7"
+                }
+              ],
+              "false": []
+            },
+            "id": "6e742a5b-6e12-46bd-8f87-328f0616aedf"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " I am too sleepy, \n I can't leave now."
+              ],
+              "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+            },
+            "id": "db142627-a28b-4f91-bd45-f28d01dd2769"
+          }
+        ]
+      },
+      "id": "4dbbc5db-89cf-43b1-8b27-080747f6edb4"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

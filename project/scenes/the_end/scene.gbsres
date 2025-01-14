@@ -1,0 +1,76 @@
+{
+  "_resourceType": "scene",
+  "id": "dc32604a-4f26-43ce-814a-ca9fbba4d30b",
+  "_index": 7,
+  "type": "TOPDOWN",
+  "name": "The end",
+  "symbol": "scene_8",
+  "x": 1157.500000000001,
+  "y": 30,
+  "width": 20,
+  "height": 18,
+  "backgroundId": "65e74bb5-bd16-41a4-a99c-9410aaad100e",
+  "tilesetId": "",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "command": "EVENT_ACTOR_HIDE",
+      "args": {
+        "actorId": "$self$"
+      },
+      "id": "48d90cc7-9a29-4044-8f3b-cddaa7e05086"
+    },
+    {
+      "command": "EVENT_AWAIT_INPUT",
+      "args": {
+        "input": [
+          "a",
+          "b",
+          "start",
+          "select"
+        ]
+      },
+      "id": "423de133-dc4c-47d6-97c2-bc13d8341287"
+    },
+    {
+      "command": "EVENT_PALETTE_SET_UI",
+      "args": {
+        "palette": "default-ui"
+      },
+      "id": "0c0f1c71-d425-44ab-bbea-27a901464acd"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Thanks for playing!\nTry also the original!\nGame made by\nRicardo Bustamante\nricardo@busta.dev"
+        ],
+        "avatarId": ""
+      },
+      "id": "9af88da7-c313-46f1-9c68-3c5b6ba2da07"
+    },
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "2439cabb-aafc-4d20-8ee4-9db792178d1a",
+        "x": {
+          "type": "number",
+          "value": 0
+        },
+        "y": {
+          "type": "number",
+          "value": 0
+        },
+        "direction": "",
+        "fadeSpeed": "2"
+      },
+      "id": "2399adef-6a4f-43d2-9be5-48e2711e219b"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00168+"
+}

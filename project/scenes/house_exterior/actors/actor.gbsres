@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "901e99f5-f8de-4eac-a7c2-54d0edae0ee9",
+  "_index": 6,
+  "symbol": "actor_50",
+  "prefabId": "",
+  "name": "",
+  "x": 34,
+  "y": 12,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "fdc88e77-924b-4ae2-b4b1-e1c64c2cba65",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Press [START]\nto open inventory"
+        ],
+        "avatarId": ""
+      },
+      "id": "302e1bff-3477-4885-8bd0-083fb01c6e22"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

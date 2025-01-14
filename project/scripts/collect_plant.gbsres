@@ -1,0 +1,145 @@
+{
+  "_resourceType": "script",
+  "id": "c7ea3a09-19f6-4c21-baf6-b02cf3c74000",
+  "name": "Collect Plant",
+  "symbol": "script_3",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Unique Var",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Item Actor"
+    }
+  },
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "0",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " I need a knife to\n pick this grass"
+              ],
+              "avatarId": "deb23be0-81b1-4160-8d9d-7bccb3a29294"
+            },
+            "id": "a70c653b-1647-4e49-92a0-359a3bb9946e"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "crash",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0,
+              "__collapse": true
+            },
+            "id": "0ee49b91-51c9-42cd-858a-93292d4ea284"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "2",
+              "operator": "<",
+              "comparator": "0",
+              "__collapseElse": false,
+              "__collapse": false,
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "2"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "2",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "770d983b-e5cb-4bcd-88d5-56cb4001e09d"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " Acquired:\n Plant x1"
+                    ],
+                    "avatarId": "deb23be0-81b1-4160-8d9d-7bccb3a29294"
+                  },
+                  "id": "38e79e94-fa9e-473c-99ba-7c1f417332c5"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "2"
+                  },
+                  "id": "85757371-cf87-459e-b9d7-c1e0472f2809"
+                }
+              ]
+            },
+            "id": "dc1d3d45-4448-4df3-af13-b1a8c194fdc7"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "V0",
+              "__collapse": false,
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "2b791f15-d98e-4f58-9c5c-e84e59245260"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "0",
+              "__collapse": false
+            },
+            "id": "b32a5aae-7c74-4722-852d-6870f1c3d9f7"
+          }
+        ]
+      },
+      "id": "ec9da465-c3da-44f7-96a6-1b7f0785df62"
+    }
+  ]
+}

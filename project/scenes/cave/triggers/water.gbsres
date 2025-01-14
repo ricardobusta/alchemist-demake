@@ -1,0 +1,31 @@
+{
+  "_resourceType": "trigger",
+  "id": "c9621214-ef3e-465d-bf49-f0c6ac1913ae",
+  "_index": 1,
+  "symbol": "trigger_7",
+  "prefabId": "",
+  "name": "Water",
+  "x": 21,
+  "y": 11,
+  "width": 10,
+  "height": 6,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "cf5dfbe1-ef8a-4f20-99e5-b9470e8c4267"
+      },
+      "id": "8b61128b-f9a1-4d91-bb0d-a1c161811263"
+    }
+  ],
+  "leaveScript": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "fd6dc38d-0a31-475a-91a7-f2476798ae95"
+      },
+      "id": "d8227397-6530-469e-9044-3ea4637454c5"
+    }
+  ]
+}

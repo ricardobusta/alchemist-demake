@@ -1,0 +1,145 @@
+{
+  "_resourceType": "script",
+  "id": "e3645bcd-909a-4d47-b8ee-43ef926bf54a",
+  "name": "Collect Mushroom",
+  "symbol": "script_8",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Variable A",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Actor A"
+    }
+  },
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "0",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " I need a knife to\n pick this shroom"
+              ],
+              "avatarId": "d94bb31b-9e94-411f-ae62-29d12f0b3ff7"
+            },
+            "id": "1ba51ced-4633-4432-bdbe-daac2c10cd7d"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "crash",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0,
+              "__collapse": true
+            },
+            "id": "49b3c196-f234-4276-8c37-1369fcb46ebc"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "8",
+              "operator": "<",
+              "comparator": "0",
+              "__collapseElse": false,
+              "__collapse": false,
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "8"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "8",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "9a3a18c0-74b1-467f-867f-3bc4904ad116"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " Acquired:\n Mushroom x1"
+                    ],
+                    "avatarId": "d94bb31b-9e94-411f-ae62-29d12f0b3ff7"
+                  },
+                  "id": "e2e0b754-e7c6-4751-b735-dc575a4ec68f"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "8"
+                  },
+                  "id": "11702e3a-175e-4d49-aae9-164847dc8564"
+                }
+              ]
+            },
+            "id": "276e53ae-6183-413d-8d68-996f79d2b405"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "V0",
+              "__collapse": false,
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "b3164c7e-59a0-434a-a9e4-5e4026f7f40f"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "0",
+              "__collapse": false
+            },
+            "id": "31c3df1c-7f65-4abd-80ba-592d0ecb1bfe"
+          }
+        ]
+      },
+      "id": "cba7789f-551b-4070-8fc2-e358fc458eaf"
+    }
+  ]
+}

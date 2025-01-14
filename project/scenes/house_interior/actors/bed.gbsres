@@ -1,0 +1,82 @@
+{
+  "_resourceType": "actor",
+  "id": "94c7818c-7cc3-4bc2-adec-a32c15047913",
+  "_index": 9,
+  "symbol": "actor_49",
+  "prefabId": "",
+  "name": "Bed",
+  "x": 2,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "96c9ac8b-b91f-4250-ad47-de02ba035a31",
+  "paletteId": "",
+  "direction": "up",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "26",
+        "operator": "<",
+        "comparator": 3,
+        "__collapseElse": false,
+        "condition": {
+          "type": "lt",
+          "valueA": {
+            "type": "variable",
+            "value": "26"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 3
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " I'm not sleepy"
+              ],
+              "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+            },
+            "id": "2344b356-b825-4e6c-b5dc-5fead8ca0388"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SWITCH_SCENE",
+            "args": {
+              "sceneId": "ea1d052c-6985-4422-a7ab-6d637697da2b",
+              "x": {
+                "type": "number",
+                "value": 0
+              },
+              "y": {
+                "type": "number",
+                "value": 0
+              },
+              "direction": "",
+              "fadeSpeed": "2"
+            },
+            "id": "207f9ff6-1d52-449e-881a-f392df9a0760"
+          }
+        ]
+      },
+      "id": "9d7106ff-e803-4519-b53d-3785d369388d"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

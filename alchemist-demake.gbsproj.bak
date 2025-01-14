@@ -2010,6 +2010,74 @@
                     "id": "b5ec5cef-b28a-4593-9375-41f70377f18f",
                     "x": 15,
                     "y": 13
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "fdc88e77-924b-4ae2-b4b1-e1c64c2cba65",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_53",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "<- To the forest"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "ef679555-b394-4b0b-89bd-f6c8a4d7f8b5"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "2a0b13df-45b9-40a5-86ec-322a3f42cb30",
+                    "x": 4,
+                    "y": 13
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "fdc88e77-924b-4ae2-b4b1-e1c64c2cba65",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "persistent": false,
+                    "collisionGroup": "",
+                    "symbol": "actor_54",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "To the river ->"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "13427075-f2c2-424e-bac5-9c9d980e7b2d"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "c3360d6b-2b8c-49e3-86b4-6df174096895",
+                    "x": 73,
+                    "y": 13
                 }
             ],
             "triggers": [
@@ -29999,11 +30067,6 @@
             "symbol": "var_cauldron_progress"
         },
         {
-            "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9__L0",
-            "name": "Saw Intro",
-            "symbol": "var_saw_intro_1"
-        },
-        {
             "id": "27",
             "name": "Flower 1 Picked",
             "symbol": "var_flower_1_picked"
@@ -30062,6 +30125,11 @@
             "id": "38",
             "name": "Shroom 6 Picked",
             "symbol": "var_shroom_6_picked"
+        },
+        {
+            "id": "fad6fe45-a6cb-495d-9366-bb63680ef4c9__L0",
+            "name": "Saw Intro",
+            "symbol": "var_saw_intro_1"
         }
     ],
     "engineFieldValues": [
@@ -30133,9 +30201,9 @@
         "showConnections": true,
         "showCollisionSlopeTiles": true,
         "showCollisionExtraTiles": false,
-        "worldScrollX": 1022,
-        "worldScrollY": 63,
-        "zoom": 200,
+        "worldScrollX": 232,
+        "worldScrollY": 0,
+        "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": false,
         "customHead": "",

@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "65e74bb5-bd16-41a4-a99c-9410aaad100e",
+  "name": "game_over",
+  "symbol": "bg_game_over",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "game_over.png",
+  "tileColors": "04168+",
+  "autoColor": false
+}

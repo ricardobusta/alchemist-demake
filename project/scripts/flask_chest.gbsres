@@ -1,0 +1,119 @@
+{
+  "_resourceType": "script",
+  "id": "51f1b759-e640-41ec-b825-1d70bcefe989",
+  "name": "Flask Chest",
+  "symbol": "script_5",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Chest Var",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Chest Actor"
+    }
+  },
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "V0",
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "V0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "0",
+              "spriteStateId": "Open"
+            },
+            "id": "9386f09e-677e-47bf-9bc9-a98aa12a3844"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "V0",
+              "__collapse": false,
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "7722b6d5-87e3-496c-bb51-de730fbfa8bb"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "9",
+              "operator": "<",
+              "comparator": "0",
+              "__collapseElse": false,
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "9"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "9",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "841ff270-3f26-4aeb-b888-e597efa3d2a7"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "9"
+                  },
+                  "id": "ff44bbff-6760-4c81-8681-b73c26520928"
+                }
+              ]
+            },
+            "id": "c5ccc21a-5311-4872-bd61-e49d577c7337"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " Acquired:\n Flask x1"
+              ],
+              "avatarId": "85bb6cad-ad36-4567-86c9-b4efaf12a2be"
+            },
+            "id": "99f429e7-91eb-4381-9881-e40be2306059"
+          }
+        ],
+        "false": []
+      },
+      "id": "c425f6d1-1d6d-4536-bcc6-892dc750412d"
+    }
+  ]
+}

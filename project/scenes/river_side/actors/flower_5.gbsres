@@ -1,0 +1,68 @@
+{
+  "_resourceType": "actor",
+  "id": "c9114581-b467-4e6b-a00a-0e957a507927",
+  "_index": 6,
+  "symbol": "actor_40",
+  "prefabId": "",
+  "name": "Flower 5",
+  "x": 64,
+  "y": 21,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "eb6b9476-2091-4c46-844d-f429ee3860aa",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "bf28d6cd-45d6-4a5e-910f-5f6b99137f80",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "31"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "2"
+        }
+      },
+      "id": "9cf4603e-ece7-4688-b30a-2aba29ed35d4"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "31",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "31"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "65757672-2d0d-445a-89ed-00708919b1fc"
+          }
+        ],
+        "false": []
+      },
+      "id": "2df2cba1-20c1-432b-844f-4e4329fda3c5"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

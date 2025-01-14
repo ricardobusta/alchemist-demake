@@ -1,0 +1,41 @@
+{
+  "_resourceType": "scene",
+  "id": "4728d085-9031-48a7-bb44-6ccbc17b62ff",
+  "_index": 2,
+  "type": "PLATFORM",
+  "name": "House Exterior",
+  "symbol": "scene_3",
+  "x": 728.4000000000001,
+  "y": 213.40000000000015,
+  "width": 80,
+  "height": 18,
+  "backgroundId": "b4f455b5-1a4d-4a5e-bb06-2532207c9d53",
+  "tilesetId": "",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "autoFadeEventCollapse": false,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d28cd16c-60d2-4987-9b99-59d7a8cd6904"
+      },
+      "id": "4616723f-4dee-4889-9db0-bab60669555f"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L0",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "98eeda84-ce08-4d6f-9761-916614b4955f"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "00460+0f50+00f0+"
+}

@@ -1,0 +1,48 @@
+{
+  "_resourceType": "actor",
+  "id": "bd5bde72-dfd6-4394-93d5-46d056e635a4",
+  "_index": 2,
+  "symbol": "actor_10",
+  "prefabId": "",
+  "name": "Book1",
+  "x": 3,
+  "y": 8,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "9858cb7f-36aa-4b27-bc86-590754d1cf09",
+  "paletteId": "",
+  "direction": "right",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Hydro Potion recipe:\nGrass x5\nFlask x1"
+        ],
+        "avatarId": ""
+      },
+      "id": "8b3993db-49ec-4e80-b2c1-24d8ff450a17"
+    },
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          " \"Behave like a fish\"\n"
+        ],
+        "avatarId": "bc8b990a-3813-435c-9472-af698a2792ac"
+      },
+      "id": "62ed0386-036d-4767-863e-c1eb7feb8d2d"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

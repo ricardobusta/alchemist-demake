@@ -1,0 +1,65 @@
+{
+  "_resourceType": "actor",
+  "id": "0edc8e9a-a665-42e7-af1e-0e21fc45ade9",
+  "_index": 0,
+  "symbol": "actor_36",
+  "prefabId": "",
+  "name": "Flask Chest 3",
+  "x": 55,
+  "y": 4,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "efe71be4-cd4c-4968-be76-491e95206c48",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "51f1b759-e640-41ec-b825-1d70bcefe989",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "25"
+        }
+      },
+      "id": "c7b1db94-afb3-4025-80bc-ac8f974724d4"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "25",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "25"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open"
+            },
+            "id": "6ab47532-77c6-46f2-88e7-c4bdf1069f3e"
+          }
+        ],
+        "false": []
+      },
+      "id": "d99d009c-afd3-47a4-b0ea-867f1b38fc6d"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

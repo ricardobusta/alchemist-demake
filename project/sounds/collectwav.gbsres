@@ -1,0 +1,8 @@
+{
+  "_resourceType": "sound",
+  "id": "6c74b256-87cb-4a28-9ed7-09de6fe709ab",
+  "name": "collect.wav",
+  "symbol": "sound_collect_wav",
+  "filename": "collect.wav",
+  "type": "wav"
+}

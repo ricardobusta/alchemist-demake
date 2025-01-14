@@ -1,0 +1,40 @@
+{
+  "_resourceType": "scene",
+  "id": "677eeb3e-88bd-4b3d-a048-659a0d826fcf",
+  "_index": 5,
+  "type": "PLATFORM",
+  "name": "River Side",
+  "symbol": "scene_6",
+  "x": 731,
+  "y": 387.0000000000001,
+  "width": 100,
+  "height": 32,
+  "backgroundId": "2324ec1e-f80d-4f1d-9c9b-a309d21c72fa",
+  "tilesetId": "",
+  "paletteIds": [],
+  "spritePaletteIds": [],
+  "autoFadeSpeed": 1,
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "d28cd16c-60d2-4987-9b99-59d7a8cd6904"
+      },
+      "id": "901c6a5b-022a-4d4f-adaa-87c7b6605217"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "L0",
+        "value": {
+          "type": "false"
+        }
+      },
+      "id": "c1d59870-e4ef-4fd1-8bba-abc84b432a0b"
+    }
+  ],
+  "playerHit1Script": [],
+  "playerHit2Script": [],
+  "playerHit3Script": [],
+  "collisions": "0060+0f!0063+0f!0063+0f!0063+0f!0063+0f!0063+0f!0063+0f!0063+0f!0063+0f!0063+0f!0063+0f!0054+0f10+0054+0f!0063+0f!0063+0f!0062+0f2+0062+0f!0063+0f!0063+0f!005a+0fa+005a+0f!0063+0f!0032+40!60!0f6+0011+0f19+0030+40!60!002+0f6+0011+0f19+002e+40!60!002+0f!006+0f2+0010+0f!0040+40!60!0f4+002+0f!009+0f!0010+0f!003e+40!60!002+0f5+00b+0f2+00e+0f2+003c+40!60!002+0f!0012+0f!00e+0f!0035+0f8+002+0f!0014+0f2+00d+0f!0035+0f9+0017+0f!00d+0f!0055+0ff+0099+"
+}

@@ -1,0 +1,95 @@
+{
+  "_resourceType": "script",
+  "id": "cf5dfbe1-ef8a-4f20-99e5-b9470e8c4267",
+  "name": "Water Enter",
+  "symbol": "script_9",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "$self$",
+        "spriteStateId": "Swimming",
+        "__collapse": true
+      },
+      "id": "2c20a396-13b7-44ce-b4f9-2bdeb2400daf"
+    },
+    {
+      "command": "EVENT_LAUNCH_PROJECTILE",
+      "args": {
+        "spriteSheetId": "10971d06-9dc9-4b24-a364-54c97d9889da",
+        "spriteStateId": "",
+        "actorId": "$self$",
+        "x": 0,
+        "y": -4,
+        "otherActorId": "$self$",
+        "direction": "up",
+        "angle": 0,
+        "angleVariable": "L0",
+        "directionType": "direction",
+        "initialOffset": 0,
+        "speed": 1,
+        "animSpeed": 63,
+        "lifeTime": 0.2,
+        "loopAnim": true,
+        "destroyOnHit": true,
+        "collisionGroup": "3",
+        "collisionMask": [
+          "1"
+        ],
+        "__collapse": true
+      },
+      "id": "4f2ff334-65a5-444c-a6a9-d5db7e18bcea"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "26",
+        "operator": ">=",
+        "comparator": 1,
+        "__collapseElse": true,
+        "condition": {
+          "type": "gte",
+          "valueA": {
+            "type": "variable",
+            "value": "26"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 1
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+            "args": {
+              "field": "plat_double_jumps",
+              "variable": "L0",
+              "value": 255,
+              "type": "number",
+              "__collapse": true
+            },
+            "id": "1617a042-2364-434a-96fa-f25299d4afad"
+          },
+          {
+            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+            "args": {
+              "field": "pl_double_jumps",
+              "variable": "L0",
+              "value": 255,
+              "type": "number",
+              "__collapse": true
+            },
+            "id": "be253f28-8af0-40f3-93aa-d3c4a92bb575"
+          }
+        ],
+        "false": []
+      },
+      "id": "ce6a4fdb-d906-408e-a8dd-9b687a561bea"
+    }
+  ]
+}

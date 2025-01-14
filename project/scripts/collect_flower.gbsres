@@ -1,0 +1,145 @@
+{
+  "_resourceType": "script",
+  "id": "bf28d6cd-45d6-4a5e-910f-5f6b99137f80",
+  "name": "Collect Flower",
+  "symbol": "script_7",
+  "description": "",
+  "variables": {
+    "V0": {
+      "id": "V0",
+      "name": "Variable A",
+      "passByReference": true
+    }
+  },
+  "actors": {
+    "0": {
+      "id": "0",
+      "name": "Actor A"
+    }
+  },
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "0",
+        "__collapseElse": false,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "0"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " I need a knife to\n pick this flower"
+              ],
+              "avatarId": "796a5c90-9228-41e2-922f-12a89913fce2"
+            },
+            "id": "8a086864-0aa7-4a4e-8fd5-332047dbf8a9"
+          }
+        ],
+        "false": [
+          {
+            "command": "EVENT_SOUND_PLAY_EFFECT",
+            "args": {
+              "type": "crash",
+              "priority": "medium",
+              "pitch": 4,
+              "frequency": 200,
+              "duration": 0.5,
+              "wait": false,
+              "effect": 0,
+              "__collapse": true
+            },
+            "id": "02528f9f-be8f-4c3f-acf3-4bf33f0e5b42"
+          },
+          {
+            "command": "EVENT_IF",
+            "args": {
+              "variable": "7",
+              "operator": "<",
+              "comparator": "0",
+              "__collapseElse": false,
+              "__collapse": false,
+              "condition": {
+                "type": "lt",
+                "valueA": {
+                  "type": "variable",
+                  "value": "7"
+                },
+                "valueB": {
+                  "type": "number",
+                  "value": 0
+                }
+              }
+            },
+            "children": {
+              "true": [
+                {
+                  "command": "EVENT_SET_VALUE",
+                  "args": {
+                    "variable": "7",
+                    "value": {
+                      "type": "number",
+                      "value": 1
+                    }
+                  },
+                  "id": "e131e03b-43e8-44af-9082-103f68b68a1e"
+                },
+                {
+                  "command": "EVENT_TEXT",
+                  "args": {
+                    "text": [
+                      " Acquired:\n Flower x1"
+                    ],
+                    "avatarId": "796a5c90-9228-41e2-922f-12a89913fce2"
+                  },
+                  "id": "32e73872-411a-4e03-be5b-6816ce3eb378"
+                }
+              ],
+              "false": [
+                {
+                  "command": "EVENT_INC_VALUE",
+                  "args": {
+                    "variable": "7"
+                  },
+                  "id": "594826a5-7c5e-4000-b762-0d47af784bb6"
+                }
+              ]
+            },
+            "id": "a02c02ed-abbb-458d-8e54-1b0d82a52964"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "V0",
+              "__collapse": false,
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "5f205e3b-3beb-4638-8f69-3b2f004f512f"
+          },
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "0",
+              "__collapse": false
+            },
+            "id": "d5dbd497-16ca-46af-a737-92b04b6cb023"
+          }
+        ]
+      },
+      "id": "35618f56-de37-4176-ac37-68a82a96ed1b"
+    }
+  ]
+}

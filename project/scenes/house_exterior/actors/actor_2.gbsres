@@ -1,0 +1,38 @@
+{
+  "_resourceType": "actor",
+  "id": "e5b54f66-90fa-46ef-8780-42f1b9efa061",
+  "_index": 7,
+  "symbol": "actor_51",
+  "prefabId": "",
+  "name": "",
+  "x": 41,
+  "y": 12,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "fdc88e77-924b-4ae2-b4b1-e1c64c2cba65",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_TEXT",
+      "args": {
+        "text": [
+          "Hold [B] to Run\nTry also jumping with [A]"
+        ],
+        "avatarId": ""
+      },
+      "id": "2347b98d-da4f-48a6-8f44-24100bd4cba5"
+    }
+  ],
+  "startScript": [],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

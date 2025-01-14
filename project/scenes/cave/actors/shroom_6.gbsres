@@ -1,0 +1,68 @@
+{
+  "_resourceType": "actor",
+  "id": "d6177472-98bb-45f1-a2f7-5a0e06bfabe0",
+  "_index": 2,
+  "symbol": "actor_45",
+  "prefabId": "",
+  "name": "Shroom 6",
+  "x": 50,
+  "y": 13,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "12ac1cb4-6d3a-4acc-ae60-d24d4a71c961",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "e3645bcd-909a-4d47-b8ee-43ef926bf54a",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "38"
+        },
+        "$variable[V1]$": {
+          "type": "variable",
+          "value": "2"
+        }
+      },
+      "id": "7b9055f0-5526-4468-8ad4-f56039ad5c97"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "38",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "38"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_DEACTIVATE",
+            "args": {
+              "actorId": "$self$"
+            },
+            "id": "e0809ab0-a516-442e-a94b-10f00fbf2abc"
+          }
+        ],
+        "false": []
+      },
+      "id": "64d23bde-6579-4e60-8ad7-afe2fea16c92"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

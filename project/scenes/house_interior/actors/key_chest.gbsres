@@ -1,0 +1,106 @@
+{
+  "_resourceType": "actor",
+  "id": "8fdf9088-9efb-4f77-9120-ae13c99a3ff5",
+  "_index": 5,
+  "symbol": "actor_23",
+  "prefabId": "",
+  "name": "Key Chest",
+  "x": 16,
+  "y": 9,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "efe71be4-cd4c-4968-be76-491e95206c48",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "10",
+        "__collapseElse": true,
+        "condition": {
+          "type": "eq",
+          "valueA": {
+            "type": "variable",
+            "value": "10"
+          },
+          "valueB": {
+            "type": "false"
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open"
+            },
+            "id": "ab852715-556e-427f-b4fa-dc21e2c99d13"
+          },
+          {
+            "command": "EVENT_SET_VALUE",
+            "args": {
+              "variable": "10",
+              "__collapse": false,
+              "value": {
+                "type": "true"
+              }
+            },
+            "id": "5d0262c2-20ad-4251-bad9-95bfbeb45660"
+          },
+          {
+            "command": "EVENT_TEXT",
+            "args": {
+              "text": [
+                " Acquired:\n Key"
+              ],
+              "avatarId": "b7990a26-880f-4398-9126-bd6b3c63ef48"
+            },
+            "id": "fac4aea7-aea8-4154-8896-0637c7ccd3f0"
+          }
+        ],
+        "false": []
+      },
+      "id": "b84e800f-4705-42f1-9c0c-92eace47c318"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "10",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "10"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open"
+            },
+            "id": "84ae45a1-97c6-499a-b256-22e3d71e6049"
+          }
+        ],
+        "false": []
+      },
+      "id": "43a287e3-ef42-4b06-9118-f34dc6650d88"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}

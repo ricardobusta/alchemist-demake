@@ -1,0 +1,13 @@
+{
+  "_resourceType": "background",
+  "id": "e7fc9d9f-e58f-43f7-9c42-7c07e428ed1d",
+  "name": "dream",
+  "symbol": "bg_dream",
+  "width": 20,
+  "height": 18,
+  "imageWidth": 160,
+  "imageHeight": 144,
+  "filename": "dream.png",
+  "tileColors": "03168+",
+  "autoColor": false
+}

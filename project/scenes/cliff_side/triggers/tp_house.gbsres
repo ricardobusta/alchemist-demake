@@ -1,0 +1,33 @@
+{
+  "_resourceType": "trigger",
+  "id": "cbbcafb0-ae87-4d10-8bcf-e373795aaec1",
+  "_index": 0,
+  "symbol": "trigger_1",
+  "prefabId": "",
+  "name": "tp house",
+  "x": 79,
+  "y": 0,
+  "width": 1,
+  "height": 44,
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_SWITCH_SCENE",
+      "args": {
+        "sceneId": "4728d085-9031-48a7-bb44-6ccbc17b62ff",
+        "x": {
+          "type": "number",
+          "value": 1
+        },
+        "y": {
+          "type": "number",
+          "value": 13
+        },
+        "direction": "right",
+        "fadeSpeed": "2"
+      },
+      "id": "6d8c5222-1e77-49ca-b36a-5921b99b46d4"
+    }
+  ],
+  "leaveScript": []
+}

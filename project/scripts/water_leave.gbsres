@@ -1,0 +1,91 @@
+{
+  "_resourceType": "script",
+  "id": "fd6dc38d-0a31-475a-91a7-f2476798ae95",
+  "name": "Water Leave",
+  "symbol": "script_10",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_ACTOR_SET_STATE",
+      "args": {
+        "actorId": "$self$",
+        "spriteStateId": "",
+        "__collapse": true
+      },
+      "id": "a8da411e-dec1-42e6-a8a8-340275b131be"
+    },
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "26",
+        "operator": ">=",
+        "comparator": 2,
+        "__collapseElse": false,
+        "condition": {
+          "type": "gte",
+          "valueA": {
+            "type": "variable",
+            "value": "26"
+          },
+          "valueB": {
+            "type": "number",
+            "value": 2
+          }
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+            "args": {
+              "field": "plat_double_jumps",
+              "variable": "L0",
+              "value": 1,
+              "type": "number",
+              "__collapse": false
+            },
+            "id": "d20104ea-88f2-4414-a271-bb648b8b2591"
+          },
+          {
+            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+            "args": {
+              "field": "pl_double_jumps",
+              "variable": "L0",
+              "value": 1,
+              "type": "number",
+              "__collapse": false
+            },
+            "id": "9084f989-468c-45cd-af32-1456dc9cc8d0"
+          }
+        ],
+        "false": [
+          {
+            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+            "args": {
+              "field": "pl_double_jumps",
+              "variable": "L0",
+              "value": 0,
+              "type": "number",
+              "__collapse": false
+            },
+            "id": "d41194e7-32de-4c00-af95-faa46e29169b"
+          },
+          {
+            "command": "BUSTA_EVENT_PLAYER_SET_FIELD",
+            "args": {
+              "field": "plat_double_jumps",
+              "variable": "L0",
+              "value": 0,
+              "type": "number",
+              "__collapse": false
+            },
+            "id": "61aad339-f240-4c56-99cb-d296b838b4c7"
+          }
+        ]
+      },
+      "id": "ac9582ab-0d76-4458-a763-241a4de5cdb4"
+    }
+  ]
+}

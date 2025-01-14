@@ -1,0 +1,55 @@
+{
+  "_resourceType": "script",
+  "id": "0d252e48-47a3-4989-afa5-c70d6cc087a8",
+  "name": "Init Variables",
+  "symbol": "script_2",
+  "description": "",
+  "variables": {},
+  "actors": {},
+  "script": [
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "2",
+        "value": {
+          "type": "number",
+          "value": -1
+        }
+      },
+      "id": "4dcc3677-828b-4167-85b3-1d7da2dcc671"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "7",
+        "value": {
+          "type": "number",
+          "value": -1
+        }
+      },
+      "id": "5909f989-0bfe-42b1-8603-4ffd3b165c20"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "8",
+        "value": {
+          "type": "number",
+          "value": -1
+        }
+      },
+      "id": "77c97142-838c-4574-a2c8-00e5c2681499"
+    },
+    {
+      "command": "EVENT_SET_VALUE",
+      "args": {
+        "variable": "9",
+        "value": {
+          "type": "number",
+          "value": -1
+        }
+      },
+      "id": "fdc2547d-941b-40f2-996c-4df06486bfe8"
+    }
+  ]
+}

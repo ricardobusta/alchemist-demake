@@ -1,0 +1,65 @@
+{
+  "_resourceType": "actor",
+  "id": "e1afdf1b-0ef6-45a2-af85-a7c0b7548fd4",
+  "_index": 7,
+  "symbol": "actor_5",
+  "prefabId": "",
+  "name": "Chest 2",
+  "x": 5,
+  "y": 14,
+  "frame": 0,
+  "animate": false,
+  "spriteSheetId": "bf370f40-cca2-4043-a18e-6148976c65bf",
+  "paletteId": "",
+  "direction": "down",
+  "moveSpeed": 1,
+  "animSpeed": 15,
+  "isPinned": false,
+  "persistent": false,
+  "collisionGroup": "",
+  "prefabScriptOverrides": {},
+  "script": [
+    {
+      "command": "EVENT_CALL_CUSTOM_EVENT",
+      "args": {
+        "customEventId": "9c09e1aa-4109-41b2-ab9e-aea5dc1ea338",
+        "$variable[V0]$": {
+          "type": "variable",
+          "value": "22"
+        }
+      },
+      "id": "6cd73fbd-6365-43c8-893c-f807bab66386"
+    }
+  ],
+  "startScript": [
+    {
+      "command": "EVENT_IF",
+      "args": {
+        "variable": "22",
+        "__collapseElse": true,
+        "condition": {
+          "type": "variable",
+          "value": "22"
+        }
+      },
+      "children": {
+        "true": [
+          {
+            "command": "EVENT_ACTOR_SET_STATE",
+            "args": {
+              "actorId": "$self$",
+              "spriteStateId": "Open"
+            },
+            "id": "69bd199c-d5df-4672-a68f-76a7176267f0"
+          }
+        ],
+        "false": []
+      },
+      "id": "1e16aa0a-c6b1-4415-b894-15914bf2f64f"
+    }
+  ],
+  "updateScript": [],
+  "hit1Script": [],
+  "hit2Script": [],
+  "hit3Script": []
+}
